@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Kid\'s Planet</string>
+
+    <string name="title_activity_story_list">StoryList</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_story_grid_view">StoryLists</string>
+
+    <string name="title_activity_story_grid_view_item">StoryGridViewItem</string>
+    <string name="title_activity_poem_grid_view">PoemLists</string>
+    <string name="title_activity_poem_grid_view_item">Poem Grid View Item</string>
+
+    <string name="title_activity_education_layout">Education</string>
+
+    <string name="title_activity_education_grid_view1">123</string>
+
+    <string name="title_activity_education_grid_view2">ABC</string>
+
+    <string name="title_activity_education_grid_view4">123</string>
+
+    <string name="title_activity_education_grid_view5">ABC</string>
+
+    <string name="title_activity_story1_detail">Story1</string>
+
+    <string name="title_activity_story2_detail">Story2</string>
+
+    <string name="title_activity_story3_detail">Story3</string>
+
+    <string name="title_activity_story4_detail">Story4</string>
+
+    <string name="title_activity_story5_detail">Story5</string>
+
+    <string name="title_activity_poem1_detail">Poem1</string>
+
+
+    <string name="title_activity_poem2_detail">Poem2</string>
+
+    <string name="title_activity_poem3_detail">Poem3</string>
+
+    <string name="title_activity_poem4_detail">Poem4</string>
+
+    <string name="title_activity_poem5_detail">Poem5</string>
+
+    <string name="title_activity_education_grid_view_detail1">EducationGridViewDetail1</string>
+
+
+    <string name="title_activity_education_grid_view_detail4">EducationGridViewDetail4</string>
+
+    <string name="title_activity_education_grid_view_detail5">EducationGridViewDetail5</string>
+
+</resources>

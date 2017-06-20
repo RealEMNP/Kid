@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.xray.kidsplanet">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StoryGridView"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story_grid_view"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".StoryGridViewItem"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story_grid_view_item"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".PoemGridView"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_poem_grid_view"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".PoemGridViewItem"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_poem_grid_view_item"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".EducationLayout"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_education_layout"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".EducationGridView1"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_education_grid_view1"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".EducationGridView2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_education_grid_view2"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".EducationGridView4"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_education_grid_view4"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".EducationGridView5"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_education_grid_view5"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Story1Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story1_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Story2Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story2_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Story3Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story3_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Story4Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story4_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Story5Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story5_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Poem1Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_poem1_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Poem2Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_poem2_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Poem3Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_poem3_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Poem4Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_poem4_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Poem5Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_poem5_detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+    </application>
+
+</manifest>

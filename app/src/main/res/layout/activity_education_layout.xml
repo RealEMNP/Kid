@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffE4c4"
+    android:weightSum="3"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.xray.kidsplanet.EducationLayout">
+    <ImageButton
+        android:id="@+id/img_btnBackEdu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_reply_black_24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/img_btn1"
+            android:src="@drawable/ic_launcher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="80dp"
+            android:layout_weight="1"
+            android:text="123" />
+        <ImageButton
+            android:id="@+id/img_btn2"
+            android:src="@drawable/ic_launcher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="100dp"
+            android:layout_weight="1"
+            android:text="ABC"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <ImageButton
+            android:id="@+id/img_btn3"
+            android:src="@drawable/ic_launcher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginRight="250dp"
+            android:layout_weight="1"
+            android:text="Colour"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_gravity="center">
+        <ImageButton
+            android:id="@+id/img_btn4"
+            android:src="@drawable/ic_launcher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="80dp"
+            android:layout_weight="1"
+            android:text="123"/>
+        <ImageButton
+            android:id="@+id/img_btn5"
+            android:src="@drawable/ic_launcher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="100dp"
+            android:layout_weight="1"
+            android:text="ABC"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
