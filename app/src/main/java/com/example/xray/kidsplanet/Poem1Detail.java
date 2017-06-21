@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 public class Poem1Detail extends AppCompatActivity {
@@ -21,9 +22,25 @@ public class Poem1Detail extends AppCompatActivity {
         getSupportActionBar().hide();
 
         final ImageButton back, home , voice;
+        TextView txt1;
         back = (ImageButton) findViewById(R.id.img_btnBackPoem1);
         home = (ImageButton) findViewById(R.id.img_btnPoem1toHome);
         voice = (ImageButton) findViewById(R.id.img_btnPoem1On);
+        txt1 = (TextView) findViewById(R.id.txtPoem1);
+        Bundle extras=getIntent().getExtras();
+        String data=extras.getString("st1");
+
+        if(data.equals("pos1")){
+            txt1.setText("Position2");
+        }if(data.equals("pos2")){
+            txt1.setText("Position2");
+        }if(data.equals("pos3")){
+            txt1.setText("Position3");
+        }if(data.equals("pos4")){
+            txt1.setText("Position4");
+        }if(data.equals("pos5")){
+            txt1.setText("Position5");
+        }
 
         back.setOnClickListener(new View.OnClickListener() {
 

@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 
 public class EducationGridView1 extends AppCompatActivity {
@@ -71,7 +70,12 @@ public class EducationGridView1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 backward.setVisibility(View.VISIBLE);
-            if(count<image.length-1){
+            if(count==7){
+                forward.setVisibility(View.INVISIBLE);
+
+            }
+
+                if(count<image.length-1){
                 ++count;
                 imgview.setImageResource(image[count]);
             }
@@ -84,14 +88,14 @@ public class EducationGridView1 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if(count<image.length-1){
                     --count;
                     if(count == 0) {
                         backward.setVisibility(View.INVISIBLE);
+                        forward.setVisibility(View.VISIBLE);
                         imgview.setImageResource(image[count]);
                     }
                     else imgview.setImageResource(image[count]);
-                }
+
             }
         });
 

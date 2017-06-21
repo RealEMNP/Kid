@@ -14,12 +14,9 @@ import android.widget.Toast;
 public class PoemGridView extends AppCompatActivity{
         GridView grid;
         ImageButton back;
-        String[] poem= {"Poem1","Poem2","Poem3","Poem4","Poem5","Pinterest","Quora","Twitter","Vimeo","WordPress",
-        "Youtube","Stumbleupon","SoundCloud","Reddit","Blogger"};
+        String[] poem= {"Poem1","Poem2","Poem3","Poem4","Poem5"};
         int[] image={R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
-        R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
-        R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
-        R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher};
+        R.drawable.ic_launcher};
 
 protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -44,22 +41,27 @@ protected void onCreate(Bundle savedInstanceState){
 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
            if(poem[position]=="Poem1"){
                    Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
+                   intent.putExtra("st1","pos1");
                    startActivity(intent);
            }
         if(poem[position]=="Poem2"){
-                Intent intent= new Intent(getApplicationContext(), Poem2Detail.class);
+                Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
+                intent.putExtra("st1","pos2");
                 startActivity(intent);
         }
         if(poem[position]=="Poem3"){
-                Intent intent= new Intent(getApplicationContext(), Poem3Detail.class);
+                Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
+                intent.putExtra("st1","pos3");
                 startActivity(intent);
         }
         if(poem[position]=="Poem4"){
-                Intent intent= new Intent(getApplicationContext(), Poem4Detail.class);
+                Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
+                intent.putExtra("st1","pos4");
                 startActivity(intent);
         }
         if(poem[position]=="Poem5"){
-                Intent intent= new Intent(getApplicationContext(), Poem5Detail.class);
+                Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
+                intent.putExtra("st1","pos5");
                 startActivity(intent);
         }
         }

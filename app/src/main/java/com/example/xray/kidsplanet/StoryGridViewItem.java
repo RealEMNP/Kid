@@ -14,7 +14,7 @@ public class StoryGridViewItem extends BaseAdapter{
     private final String[] story;
     private final int[] image;
 
-//    public StoryGridViewItem(){}
+
 
     public StoryGridViewItem(Context c, String[] story, int[] image){
         mContext=c;

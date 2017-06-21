@@ -19,13 +19,12 @@ import android.widget.Toast;
 public class StoryGridView extends AppCompatActivity{
     GridView grid;
     ImageButton back;
-    String[] story= {"Story1","Story2","Story3","Story4","Story5","Pinterest","Quora","Twitter","Vimeo","WordPress",
-                     "Youtube","Stumbleupon","SoundCloud","Reddit","Blogger"};
+    String[] story= {"Story1","Story2","Story3","Story4","Story5"};
     int[] image={R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
-            R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
-            R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
-            R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher};
+            R.drawable.ic_launcher};
 
+    String[] story_detail= {"This is Story1_1","This is Story1_2","This is Story1_3","This is Story1_4",
+            "This is Story1_5"};
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -50,23 +49,30 @@ public class StoryGridView extends AppCompatActivity{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (story[position]=="Story1"){
                     Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
-                    intent.putExtra("story1","This is Story1 Detail.");
+                     intent.putExtra("st1","pos1");
                     startActivity(intent);
+
                 }
                 if (story[position]=="Story2"){
-                    Intent intent= new Intent(getApplicationContext(), Story2Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    intent.putExtra("st1","pos2");
+
                     startActivity(intent);
                 }
                 if (story[position]=="Story3"){
-                    Intent intent= new Intent(getApplicationContext(), Story3Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    intent.putExtra("st1","pos3");
+
                     startActivity(intent);
                 }
                 if (story[position]=="Story4"){
-                    Intent intent= new Intent(getApplicationContext(), Story4Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    intent.putExtra("st1","pos4");
                     startActivity(intent);
                 }
                 if (story[position]=="Story5"){
-                    Intent intent= new Intent(getApplicationContext(), Story5Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    intent.putExtra("st1","pos5");
                     startActivity(intent);
                 }
 

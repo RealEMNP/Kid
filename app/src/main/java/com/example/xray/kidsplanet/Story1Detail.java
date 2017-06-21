@@ -10,18 +10,31 @@ import android.widget.TextView;
 
 public class Story1Detail extends AppCompatActivity {
     boolean on = true;
+     ImageButton back , home ,voice;
+     TextView txt1;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story1_detail);
         getSupportActionBar().hide();
 
-        final ImageButton back , home ,voice;
-        final TextView txt1;
         back = (ImageButton) findViewById(R.id.img_btnBackStory1);
         home = (ImageButton) findViewById(R.id.img_btnStory1toHome);
         voice = (ImageButton) findViewById(R.id.img_btnStory1On);
         txt1 = (TextView) findViewById(R.id.txtStory1);
+      Bundle extras=getIntent().getExtras();
+       String data=extras.getString("st1");
 
+        if(data.equals("pos1")){
+            txt1.setText("Position2");
+        }if(data.equals("pos2")){
+            txt1.setText("Position2");
+        }if(data.equals("pos3")){
+            txt1.setText("Position3");
+        }if(data.equals("pos4")){
+            txt1.setText("Position4");
+        }if(data.equals("pos5")){
+            txt1.setText("Position5");
+        }
         back.setOnClickListener(new View.OnClickListener(){
 
             @Override
