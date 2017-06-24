@@ -1,17 +1,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffE4c4"
-    android:weightSum="3"
     android:layout_gravity="center"
+    android:background="#ffE4c4"
     android:orientation="vertical"
+    android:weightSum="3"
     tools:context="com.example.xray.kidsplanet.EducationLayout">
+
     <ImageButton
         android:id="@+id/img_btnBackEdu"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_reply_black_24dp"/>
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_1" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,64 +28,83 @@
 
         <ImageButton
             android:id="@+id/img_btn1"
-            android:src="@drawable/ic_launcher"
+            style="@android:style/Widget.DeviceDefault.ImageButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="80dp"
             android:layout_weight="1"
-            android:text="123" />
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/one_two_three"
+            android:background="@android:color/transparent"
+            />
+
         <ImageButton
             android:id="@+id/img_btn2"
-            android:src="@drawable/ic_launcher"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="100dp"
             android:layout_weight="1"
-            android:text="ABC"/>
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/abc"
+            android:background="@android:color/transparent"
+             />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+
         <ImageButton
             android:id="@+id/img_btn3"
-            android:src="@drawable/ic_launcher"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="250dp"
             android:layout_marginRight="250dp"
             android:layout_weight="1"
-            android:text="Colour"/>
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/colour"
+            android:background="@android:color/transparent"
+            />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_gravity="center">
+        android:weightSum="2">
+
         <ImageButton
             android:id="@+id/img_btn4"
-            android:src="@drawable/ic_launcher"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="80dp"
             android:layout_weight="1"
-            android:text="123"/>
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tit_nit_thone"
+            android:background="@android:color/transparent"/>
+
         <ImageButton
             android:id="@+id/img_btn5"
-            android:src="@drawable/ic_launcher"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="100dp"
             android:layout_weight="1"
-            android:text="ABC"/>
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ka_kha_ga"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
-
 
 
 </LinearLayout>

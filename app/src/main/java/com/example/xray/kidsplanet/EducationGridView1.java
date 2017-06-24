@@ -13,8 +13,9 @@ public class EducationGridView1 extends AppCompatActivity {
     boolean on = true;
     int count = 0;
 
-    static final int image[] = {R.drawable.one , R.drawable.two , R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six,
-            R.drawable.seven, R.drawable.eight, R.drawable.nine};
+    static final int image[] = {R.drawable.ic_launcher , R.drawable.ic_launcher , R.drawable.ic_launcher,
+            R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
+            R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher};
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,9 +56,9 @@ public class EducationGridView1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(on)
-                    voice.setImageResource(R.drawable.ic_volume_off_black_24dp);
+                    voice.setImageResource(R.drawable.voice_off);
                 else
-                    voice.setImageResource(R.drawable.ic_volume_up_black_24dp);
+                    voice.setImageResource(R.drawable.voice_on);
                 on = !on;
             }
         });

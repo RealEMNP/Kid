@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:background="#0099cc"
+    android:background="#ffE4c4"
     tools:context="com.example.xray.kidsplanet.PoemGridViewItem">
     <ImageView
         android:id="@+id/poem_grid_image"
         android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:layout_height="100dp"
+        />
     <TextView
         android:id="@+id/poem_grid_text"
         android:layout_width="wrap_content"

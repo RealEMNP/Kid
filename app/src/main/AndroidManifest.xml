@@ -14,6 +14,7 @@
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -54,17 +55,35 @@
             android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme" />
         <activity
-            android:name=".Story1Detail"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_story1_detail"
-            android:screenOrientation="landscape"
-            android:theme="@style/FullscreenTheme" />
-        <activity
             android:name=".Poem1Detail"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_poem1_detail"
             android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Story1_Detail"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story1__detail"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Story1_Detail_ViewPagerAdapter"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story1__detail__view_pager_adapter"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Story1_ViewPagerAdapter"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_story1__view_pager_adapter"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Setting"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
+            android:label="@string/title_activity_setting"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

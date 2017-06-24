@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="#ffE4c4"
     android:weightSum="2"
     android:orientation="vertical"
     tools:context="com.example.xray.kidsplanet.PoemGridView">
@@ -18,11 +18,14 @@
             android:id="@+id/img_btnBackPoem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_reply_black_24dp"/>
+            android:src="@drawable/back_1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
         <ImageView
             android:layout_width="90dp"
             android:layout_height="40dp"
-            android:src="@drawable/poemheader3"
+            android:src="@drawable/poem_header"
             android:layout_weight="1"
             android:layout_marginLeft="200dp"
             android:layout_marginRight="200dp"/>

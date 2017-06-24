@@ -1,19 +1,12 @@
 package com.example.xray.kidsplanet;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 
 public class StoryGridView extends AppCompatActivity{
@@ -48,30 +41,29 @@ public class StoryGridView extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (story[position]=="Story1"){
-                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                      intent.putExtra("st1","pos1");
                     startActivity(intent);
-
                 }
                 if (story[position]=="Story2"){
-                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                     intent.putExtra("st1","pos2");
 
                     startActivity(intent);
                 }
                 if (story[position]=="Story3"){
-                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                     intent.putExtra("st1","pos3");
 
                     startActivity(intent);
                 }
                 if (story[position]=="Story4"){
-                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                     intent.putExtra("st1","pos4");
                     startActivity(intent);
                 }
                 if (story[position]=="Story5"){
-                    Intent intent= new Intent(getApplicationContext(), Story1Detail.class);
+                    Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                     intent.putExtra("st1","pos5");
                     startActivity(intent);
                 }

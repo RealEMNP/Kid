@@ -49,4 +49,16 @@
 
     <string name="title_activity_education_grid_view_detail5">EducationGridViewDetail5</string>
 
+    <string name="title_activity_story1__detail">Story1_Detail</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_story1__detail__view_pager_adapter">
+        Story1_Detail_ViewPagerAdapter
+    </string>
+
+    <string name="title_activity_story1__view_pager_adapter">Story1_ViewPagerAdapter</string>
+
+    <string name="title_activity_setting">Setting</string>
+
 </resources>

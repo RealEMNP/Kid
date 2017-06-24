@@ -46,7 +46,7 @@ public class PoemGridViewItem extends BaseAdapter {
             TextView textView= (TextView) grid.findViewById(R.id.poem_grid_text);
             ImageView imageView= (ImageView) grid.findViewById(R.id.poem_grid_image);
             textView.setText(story[position]);
-            imageView.setImageResource(image[position]);
+            imageView.setImageResource(R.drawable.untitled3);
         }
         else {
             grid = (View) convertView;

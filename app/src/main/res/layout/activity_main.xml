@@ -30,20 +30,23 @@
                 android:weightSum="2">
                 <ImageButton
                     android:id="@+id/img_btnStory"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="80dp"
                     android:layout_weight="1"
                     android:backgroundTint="@android:color/transparent"
-                    android:layout_marginLeft="60dp"
-                    android:src="@drawable/story_icon_2"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/str_icon_1"
                     />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="false"
-                    android:cropToPadding="false" />
+                 <!--<ImageButton-->
+                     <!--android:id="@+id/btn_setting"-->
+                     <!--android:layout_width="50dp"-->
+                     <!--android:layout_height="50dp"-->
+                     <!--android:layout_marginLeft="20dp"-->
+                     <!--android:background="@android:color/transparent"-->
+                     <!--android:src="@drawable/setting_1"-->
+                     <!--/>-->
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -52,13 +55,13 @@
                 android:layout_weight="1">
                 <ImageButton
                     android:id="@+id/img_btnPoem"
-                    android:layout_width="120dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"
                     android:layout_marginRight="10dp"
                     android:backgroundTint="@android:color/transparent"
-                    android:layout_marginTop="60dp"
-                    android:src="@drawable/poem_icon_2"/>
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/poem_bg_2"/>
 
             </LinearLayout>
             <LinearLayout
@@ -69,16 +72,27 @@
                 android:orientation="vertical">
                 <ImageButton
                     android:id="@+id/img_btnEdu"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="80dp"
                     android:layout_weight="1"
                     android:backgroundTint="@android:color/transparent"
-                    android:layout_marginLeft="60dp"
-                    android:src="@drawable/edu_icon_2"
+                    android:layout_marginLeft="40dp"
+                    android:src="@drawable/edu_bg_2"
                     />
             </LinearLayout>
 
         </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="true"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_settings_black_24dp" />
+
 
 </LinearLayout>

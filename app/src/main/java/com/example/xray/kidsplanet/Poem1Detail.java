@@ -1,25 +1,28 @@
 package com.example.xray.kidsplanet;
 
-import android.annotation.SuppressLint;
-import android.content.ComponentName;
 import android.content.Intent;
-import android.support.v4.content.IntentCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import android.database.Cursor;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Poem1Detail extends AppCompatActivity {
     boolean on = true;
+    String query;
+    String data;
+    private  static final String DB_Name = "database.db";
+    DataBaseHelper helper ;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poem1_detail);
         getSupportActionBar().hide();
+
+        helper = DataBaseHelper.getInstance(this, DB_Name);
 
         final ImageButton back, home , voice;
         TextView txt1;
@@ -28,11 +31,23 @@ public class Poem1Detail extends AppCompatActivity {
         voice = (ImageButton) findViewById(R.id.img_btnPoem1On);
         txt1 = (TextView) findViewById(R.id.txtPoem1);
         Bundle extras=getIntent().getExtras();
-        String data=extras.getString("st1");
+        data=extras.getString("st1");
 
         if(data.equals("pos1")){
-            txt1.setText("Position2");
-        }if(data.equals("pos2")){
+            query = "Select detail from poem where poemID = 'p1'";
+            Cursor cursor = DataBaseHelper.rawQuery(query);
+            //if(cursor != null && cursor.getCount() != 0) {
+                Toast.makeText(getBaseContext(),cursor.getString(cursor.getColumnIndex("detail")),Toast.LENGTH_SHORT).show();
+                //if (cursor.moveToFirst()) {
+
+                     //       txt1.setText(cursor.getString(cursor.getColumnIndex("detail")));
+
+                    //}
+                //}
+            }
+
+
+        if(data.equals("pos2")){
             txt1.setText("Position2");
         }if(data.equals("pos3")){
             txt1.setText("Position3");
@@ -63,9 +78,9 @@ public class Poem1Detail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(on)
-                 voice.setImageResource(R.drawable.ic_volume_off_black_24dp);
+                 voice.setImageResource(R.drawable.voice_off);
                 else
-                    voice.setImageResource(R.drawable.ic_volume_up_black_24dp);
+                    voice.setImageResource(R.drawable.voice_on);
                 on = !on;
             }
         });
