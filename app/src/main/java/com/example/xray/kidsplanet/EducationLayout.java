@@ -26,6 +26,7 @@ public class EducationLayout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(EducationLayout.this, EducationGridView1.class);
+                intent.putExtra("btn","eng_123");
                 startActivity(intent);
             }
         });
@@ -34,6 +35,7 @@ public class EducationLayout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getApplicationContext(), EducationGridView1.class);
+                intent.putExtra("btn","abc");
                 startActivity(intent);
             }
         });
@@ -49,6 +51,7 @@ public class EducationLayout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getApplicationContext(), EducationGridView1.class);
+                intent.putExtra("btn","mm_123");
                 startActivity(intent);
             }
         });
@@ -57,6 +60,7 @@ public class EducationLayout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getApplicationContext(), EducationGridView1.class);
+                intent.putExtra("btn","ka_kha_ga");
                 startActivity(intent);
             }
         });

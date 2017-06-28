@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.hide();
 
         ImageButton imgbtnStory , imgbtnPoem , imgbtnEdu;
-        FloatingActionButton FAB = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        final FloatingActionButton FAB = (FloatingActionButton) findViewById(R.id.floatingActionButton);
 
         imgbtnStory = (ImageButton) findViewById(R.id.img_btnStory);
         imgbtnPoem = (ImageButton) findViewById(R.id.img_btnPoem);
@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(getApplicationContext(), Setting.class);
-                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.slide_up);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_down,R.anim.slide_down);
             }
         });
 

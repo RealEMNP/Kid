@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 class Story1_ViewPageAdapter extends PagerAdapter {
 
@@ -18,7 +20,8 @@ class Story1_ViewPageAdapter extends PagerAdapter {
     int[] flag;
     LayoutInflater inflater;
 
-    public Story1_ViewPageAdapter(Context context, String[] rank,  int[] flag) {
+
+    public Story1_ViewPageAdapter(Context context, String[] rank, int[] flag) {
         this.context = context;
         this.rank = rank;
         this.flag = flag;
@@ -41,10 +44,13 @@ class Story1_ViewPageAdapter extends PagerAdapter {
         TextView txtrank;
         ImageView imgflag;
 
+
+
         inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View itemView = inflater.inflate(R.layout.activity_story1__view_pager_adapter, container,
                 false);
+
 
         txtrank = (TextView) itemView.findViewById(R.id.txtStory1);
         txtrank.setText(rank[position]);

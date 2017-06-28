@@ -1,17 +1,19 @@
 package com.example.xray.kidsplanet;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import android.widget.Toast;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 	private static SQLiteDatabase sqliteDb;
@@ -22,7 +24,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	static Cursor cursor = null;
 
 	DataBaseHelper(Context context, String name, CursorFactory factory,
-				   int version) {
+			int version) {
 		super(context, name, factory, version);
 		this.context = context;
 
@@ -126,12 +128,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 				sqliteDb.close();
 			}
 			sqliteDb = instance.getWritableDatabase();
-			System.out.println("DB Ok  ");
 
 			cursor = null;
 			cursor = sqliteDb.rawQuery(query, null);
+			System.out.println("DB Ok  ");
+
 		} catch (Exception e) {
-			System.out.println("DB ERROR " + e.getMessage());
+			System.out.println("DB ERROR  " + e.getMessage());
 			e.printStackTrace();
 		}
 		return cursor;
@@ -145,7 +148,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 			sqliteDb = instance.getWritableDatabase();
 			sqliteDb.execSQL(query);
 		} catch (Exception e) {
-			System.out.println("DB ERROR is is " + e.getMessage());
+			System.out.println("DB ERROR  " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

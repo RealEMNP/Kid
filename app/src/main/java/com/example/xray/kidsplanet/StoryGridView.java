@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 public class StoryGridView extends AppCompatActivity{
     GridView grid;
     ImageButton back;
-    String[] story= {"Story1","Story2","Story3","Story4","Story5"};
+    String[] story= new String[]{"Story1", "Story2", "Story3", "Story4", "Story5"};
     int[] image={R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
             R.drawable.ic_launcher};
 

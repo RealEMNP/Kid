@@ -14,7 +14,7 @@ public class Poem1Detail extends AppCompatActivity {
     boolean on = true;
     String query;
     String data;
-    private  static final String DB_Name = "database.db";
+    private  static final String DB_Name = "kid.db";
     DataBaseHelper helper ;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +34,16 @@ public class Poem1Detail extends AppCompatActivity {
         data=extras.getString("st1");
 
         if(data.equals("pos1")){
-            query = "Select detail from poem where poemID = 'p1'";
+            query = "Select detail from poem where poem ID == 'p1'";
             Cursor cursor = DataBaseHelper.rawQuery(query);
-            //if(cursor != null && cursor.getCount() != 0) {
-                Toast.makeText(getBaseContext(),cursor.getString(cursor.getColumnIndex("detail")),Toast.LENGTH_SHORT).show();
-                //if (cursor.moveToFirst()) {
+//            if(cursor != null && cursor.getCount() != 0) {
+//
+//                if (cursor.moveToFirst()) {
 
-                     //       txt1.setText(cursor.getString(cursor.getColumnIndex("detail")));
+//                            txt1.append(cursor.getString(cursor.getColumnIndex("detail")));
+//                }
+//                }
 
-                    //}
-                //}
             }
 
 

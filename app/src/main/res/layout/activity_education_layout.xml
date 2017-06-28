@@ -9,14 +9,32 @@
     android:weightSum="3"
     tools:context="com.example.xray.kidsplanet.EducationLayout">
 
-    <ImageButton
-        android:id="@+id/img_btnBackEdu"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:src="@drawable/back_1" />
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="90dp"-->
+        <!--android:layout_weight="one"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="2">-->
+
+        <ImageButton
+            android:id="@+id/img_btnBackEdu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back_1" />
+
+        <!--<ImageView-->
+            <!--android:layout_width="90dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginLeft="200dp"-->
+            <!--android:layout_marginRight="200dp"-->
+
+            <!--android:layout_weight="one"-->
+            <!--android:src="@drawable/poem_header" />-->
+    <!--</LinearLayout>-->
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,10 +53,9 @@
             android:layout_marginRight="80dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/one_two_three"
             android:background="@android:color/transparent"
-            />
+            android:scaleType="fitCenter"
+            android:src="@drawable/one_two_three" />
 
         <ImageButton
             android:id="@+id/img_btn2"
@@ -48,10 +65,9 @@
             android:layout_marginRight="100dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/abc"
             android:background="@android:color/transparent"
-             />
+            android:scaleType="fitCenter"
+            android:src="@drawable/abc" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,7 +106,7 @@
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/tit_nit_thone"
+            android:src="@drawable/it_nit_thone"
             android:background="@android:color/transparent"/>
 
         <ImageButton
