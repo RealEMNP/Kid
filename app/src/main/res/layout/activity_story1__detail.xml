@@ -19,6 +19,7 @@
             android:id="@+id/img_btnBackStory1"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
             android:src="@drawable/back_1"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
@@ -37,19 +38,23 @@
             android:id="@+id/img_btnStory1On"
             android:layout_width="60dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="480dp"
+            android:layout_marginLeft="470dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             android:src="@drawable/voice_on" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
         <android.support.v4.view.ViewPager
             android:id="@+id/pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
 

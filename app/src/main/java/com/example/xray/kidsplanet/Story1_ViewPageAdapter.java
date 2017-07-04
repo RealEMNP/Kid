@@ -6,6 +6,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ class Story1_ViewPageAdapter extends PagerAdapter {
     Context context;
     String[] rank;
     int[] flag;
+//    int[] song;
     LayoutInflater inflater;
 
 
@@ -25,6 +28,7 @@ class Story1_ViewPageAdapter extends PagerAdapter {
         this.context = context;
         this.rank = rank;
         this.flag = flag;
+//        this.song = song;
     }
 
     @Override
@@ -43,6 +47,8 @@ class Story1_ViewPageAdapter extends PagerAdapter {
         // Declare Variables
         TextView txtrank;
         ImageView imgflag;
+//        ImageButton img_song;
+
 
 
 
@@ -56,8 +62,16 @@ class Story1_ViewPageAdapter extends PagerAdapter {
         txtrank.setText(rank[position]);
         imgflag = (ImageView) itemView.findViewById(R.id.imgStory1);
         imgflag.setImageResource(flag[position]);
+//        img_song = (ImageButton) itemView.findViewById(R.id.img_btnStory1On);
+
+
 
         ((ViewPager) container).addView(itemView);
+
+//        LinearLayout ll = (LinearLayout)itemView.findViewById(R.id.lin_viewpager);
+//        ImageButton newButton = new ImageButton(context);
+//        newButton.setImageResource(R.drawable.voice_on);
+//        ll.addView(newButton);
 
         return itemView;
     }

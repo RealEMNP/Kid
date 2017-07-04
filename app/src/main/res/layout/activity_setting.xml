@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
@@ -29,8 +30,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:text="SETTING"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -54,13 +56,17 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="false"
                     app:srcCompat="@android:drawable/btn_star_big_off" />
 
                 <Button
-                    android:id="@+id/btnRate"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/web_Rate"
+                    android:layout_width="100dp"
                     android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#fff"
                     android:text="Rate Us Now" />
             </LinearLayout>
 
@@ -71,13 +77,15 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
                     app:srcCompat="@android:drawable/ic_menu_info_details" />
 
                 <Button
                     android:id="@+id/btnAboutUs"
                     android:layout_width="100dp"
                     android:layout_height="60dp"
+                    android:background="#fff"
                     android:text="About Us" />
             </LinearLayout>
         </LinearLayout>

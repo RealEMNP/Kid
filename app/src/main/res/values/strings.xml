@@ -65,10 +65,13 @@
     <string name="title_story4"></string>
     <string name="title_story5"></string>
 
-    <string name="title_poem1"></string>
-    <string name="title_poem2"></string>
-    <string name="title_poem3"></string>
-    <string name="title_poem4"></string>
-    <string name="title_poem5"></string>
+    <string name="title_poem1">ဖိနပ်ကလေး</string>
+    <string name="title_poem2">လက်ဆေးကြစို့</string>
+    <string name="title_poem3">ပုရွက်ဆိတ်</string>
+    <string name="title_poem4">မနှင်းဆီ</string>
+    <string name="title_poem5">ဖေဖေနဲ့မေမေရယ်</string>
+
+    <string name="title_activity_rate_us">Rate Us Now</string>
+    <string name="title_activity_about_us">About Us</string>
 
 </resources>

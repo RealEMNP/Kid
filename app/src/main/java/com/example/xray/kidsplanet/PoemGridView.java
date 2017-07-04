@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class PoemGridView extends AppCompatActivity{
         GridView grid;
         ImageButton back;
-        String[] poem= {"Poem1","Poem2","Poem3","Poem4","Poem5"};
+        String[] poem= {"ဖိနပ္ကေလး","လက္ေဆးျကစို့","ပုရြက္ဆိတ္","မနွင္းဆီ","ေဖေဖနဲ့ေမေမရယ္"};
         int[] image={R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
         R.drawable.ic_launcher};
 
@@ -39,27 +39,27 @@ protected void onCreate(Bundle savedInstanceState){
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 @Override
 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-           if(poem[position]=="Poem1"){
+           if(poem[position]=="ဖိနပ္ကေလး"){
                    Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                    intent.putExtra("st1","pos1");
                    startActivity(intent);
            }
-        if(poem[position]=="Poem2"){
+        if(poem[position]=="လက္ေဆးျကစို့"){
                 Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                 intent.putExtra("st1","pos2");
                 startActivity(intent);
         }
-        if(poem[position]=="Poem3"){
+        if(poem[position]=="ပုရြက္ဆိတ္"){
                 Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                 intent.putExtra("st1","pos3");
                 startActivity(intent);
         }
-        if(poem[position]=="Poem4"){
+        if(poem[position]=="မနွင္းဆီ"){
                 Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                 intent.putExtra("st1","pos4");
                 startActivity(intent);
         }
-        if(poem[position]=="Poem5"){
+        if(poem[position]=="ေဖေဖနဲ့ေမေမရယ္"){
                 Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                 intent.putExtra("st1","pos5");
                 startActivity(intent);

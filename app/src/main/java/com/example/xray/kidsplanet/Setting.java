@@ -3,6 +3,7 @@ package com.example.xray.kidsplanet;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.provider.Telephony;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -24,6 +26,7 @@ import static android.R.attr.button;
 public class Setting extends AppCompatActivity {
     private PopupWindow mPopWindow;
     AlertDialog.Builder alertDialogBuilder;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +35,13 @@ public class Setting extends AppCompatActivity {
         actionBar.hide();
 
         ImageButton back;
-        Button btnRate ,btnAboutUs;
+        final Button btnAboutUs;
+        final Button btnRate;
 
         back = (ImageButton) findViewById(R.id.back);
-        btnRate = (Button) findViewById(R.id.btnRate);
+        btnRate = (Button) findViewById(R.id.web_Rate);
         btnAboutUs = (Button) findViewById(R.id.btnAboutUs);
+
 
         back.setOnClickListener(new View.OnClickListener(){
 
@@ -49,7 +54,8 @@ public class Setting extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), RateUs.class);
+                startActivity(intent);
             }
         });
         btnAboutUs.setOnClickListener(new View.OnClickListener() {
@@ -57,8 +63,8 @@ public class Setting extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 alertDialogBuilder = new AlertDialog.Builder(Setting.this);
-                alertDialogBuilder.setMessage("Desingned & developed by" + "\n\t\t\t\t\t\t\t\t" + "X-Ray" + "\n"+
-                        "Computer University Taungoo" + "\n\t\t\t\t\t\t\t" + "Version 1.0");
+                alertDialogBuilder.setMessage("\t\t\t\t"+"Developed by:" + "\n\n\t\t\t\t\t\t\t\t" + "X-Ray" + "\n\n"+
+                        "Computer University Taungoo" + "\n\n\t\t\t\t\t\t\t" + "Version 1.0"+"\n\n"+"Credit to: Original Uploader");
 
 //                alertDialogBuilder.setPositiveButton("yes",
 //                        new DialogInterface.OnClickListener() {
@@ -81,7 +87,7 @@ public class Setting extends AppCompatActivity {
                 WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
                 lp.copyFrom(alertDialog.getWindow().getAttributes());
                 lp.width = 800;
-                lp.height = 450;
+                lp.height = 750;
 //                lp.x = 170;
 //                lp.y = 100;
                 alertDialog.getWindow().setAttributes(lp);

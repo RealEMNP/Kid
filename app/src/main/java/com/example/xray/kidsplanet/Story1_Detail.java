@@ -2,18 +2,17 @@ package com.example.xray.kidsplanet;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.KeyCharacterMap;
+import android.view.KeyEvent;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Story1_Detail extends Activity {
 
@@ -23,13 +22,15 @@ public class Story1_Detail extends Activity {
     String[] rank = new String[9];
     ArrayList<String> str = new ArrayList<>();
     int[] flag;
+    int[] song;
     boolean on = true;
     ImageButton back, home, voice;
-    int i = 0;
+    int i;
     String query;
     String id ;
     private static final String DB_Name = "kid.db";
     DataBaseHelper helper;
+    MediaPlayer mp;
 
 
     @Override
@@ -49,6 +50,7 @@ public class Story1_Detail extends Activity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+                mp.stop();
             }
         });
         home.setOnClickListener(new View.OnClickListener() {
@@ -58,30 +60,29 @@ public class Story1_Detail extends Activity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                mp.stop();
             }
         });
-        voice.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                if (on)
-                    voice.setImageResource(R.drawable.voice_off);
-                else
-                    voice.setImageResource(R.drawable.voice_on);
-                on = !on;
-            }
-        });
+//        boolean hasBackKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_BACK);
+//        if(hasBackKey) mp.stop();
+
 
         Bundle extras = getIntent().getExtras();
         String data = extras.getString("st1");
 
         if (data.equals("pos1")) {
 
-            flag = new int[]{R.drawable.ic_launcher, R.drawable.ic_launcher,
-                    R.drawable.ic_launcher, R.drawable.ic_launcher,
-                    R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
-                    R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher};
+            song = new  int[]{R.raw.cinderalla_1,R.raw.cinderalla_2, R.raw.cinderalla_3,
+                    R.raw.cinderalla_4,R.raw.cinderalla_5, R.raw.cinderalla_6,  R.raw.cinderalla_7,
+                    R.raw.cinderalla_8,  R.raw.cinderalla_9,R.raw.cinderalla_9};
 
+            flag = new int[]{R.mipmap.cindrella_1, R.mipmap.cindrella_2,
+                    R.mipmap.cindrella_3 ,R.mipmap.cindrella_4,
+                    R.mipmap.cindrella_5, R.mipmap.cindrella_6, R.mipmap.cindrella_7,
+                    R.mipmap.cindrella_8, R.mipmap.cindrella_9, R.mipmap.cindrella_10};
+
+            i=0;
             query = "Select detail from story";
             Cursor cursor = helper.rawQuery(query);
             while (cursor.moveToNext()) {
@@ -94,50 +95,129 @@ public class Story1_Detail extends Activity {
             cursor.close();
             rank = (String[]) str.toArray(new String[str.size()]);
 
+            for (i = 0; i<9 ;i++){
+                viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                    public void onPageScrollStateChanged(int state) {}
+                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+
+                    public void onPageSelected(int position) {
+                        // Check if this is the page you want.
+
+                        if(position == i){
+                            mp = new MediaPlayer().create(Story1_Detail.this, song[i]);
+                            mp.start();
+                            on = mp.isPlaying();
+
+                            voice.setOnClickListener(new View.OnClickListener() {
+
+                                @Override
+                                public void onClick(View v) {
+                                    if (on) {
+                                        voice.setImageResource(R.drawable.voice_off);
+                                        mp.stop();
+                                    } else {
+                                        voice.setImageResource(R.drawable.voice_on);
+                                        mp = new MediaPlayer().create(Story1_Detail.this, song[i]);
+                                        mp.start();
+                                    }
+                                    on = !on;
+                                }
+                            });
+                        }
+                    }
+                });
+
+            }
+
+
+
         }
 
         else if (data.equals("pos2")) {
 
-                flag = new int[]{R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher};
+                flag = new int[]{R.drawable.ic_launcher, R.mipmap.elephant_2,
+                        R.mipmap.elephant_3, R.mipmap.elephant_4,
+                        R.mipmap.elephant_4, R.mipmap.elephant_4, R.mipmap.elephant_4,
+                        R.mipmap.elephant_4, R.mipmap.elephant_5, R.mipmap.elephant_5,
+                        R.mipmap.elephant_5, R.mipmap.elephant_5, R.mipmap.elephant_5,R.drawable.ic_launcher};
 
+            i=0;
             query = "Select detail from story";
             Cursor cursor = helper.rawQuery(query);
             cursor.move(9);
             while (cursor.moveToNext()) {
-                    if (i <14) {
+                    if (i<13) {
                         String story_detail = cursor.getString(cursor.getColumnIndex("detail"));
                         str.add(story_detail);
                         i++;
 
-                }else cursor.isClosed();
+                }
             }
-
+            cursor.close();
             rank = (String[]) str.toArray(new String[str.size()]);
+
+            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp.start();
+            on = mp.isPlaying();
+
+            voice.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    if (on) {
+                        voice.setImageResource(R.drawable.voice_off);
+                        mp.stop();
+                    } else {
+                        voice.setImageResource(R.drawable.voice_on);
+                        mp = new MediaPlayer().create(Story1_Detail.this, R.raw.secret_love_song);
+                        mp.start();
+                    }
+                    on = !on;
+                }
+            });
             }
 
             else if (data.equals("pos3")) {
 
-                flag = new int[]{R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher};
+                flag = new int[]{R.mipmap.lion_1, R.mipmap.lion_2, R.mipmap.lion_3,
+                        R.mipmap.lion_3, R.mipmap.lion_4, R.mipmap.lion_5,
+                        R.mipmap.lion_5, R.mipmap.lion_6, R.mipmap.lion_6,
+                        R.mipmap.lion_6, R.mipmap.lion_7, R.mipmap.lion_8,R.mipmap.lion_9};
 
+            i=0;
             query = "Select detail from story";
             Cursor cursor = helper.rawQuery(query);
             cursor.move(23);
             i = 0;
             while (cursor.moveToNext()) {
-                if (i <13) {
+                if (i <12) {
                     String story_detail = cursor.getString(cursor.getColumnIndex("detail"));
                     str.add(story_detail);
+                    i++;
                 }
             }
             cursor.close();
             rank = (String[]) str.toArray(new String[str.size()]);
+
+            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp.start();
+            on = mp.isPlaying();
+
+            voice.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    if (on) {
+                        voice.setImageResource(R.drawable.voice_off);
+                        mp.stop();
+                    } else {
+                        voice.setImageResource(R.drawable.voice_on);
+                        mp = new MediaPlayer().create(Story1_Detail.this, R.raw.secret_love_song);
+                        mp.start();
+                    }
+                    on = !on;
+                }
+            });
             }
 
             else if (data.equals("pos4")) {
@@ -147,19 +227,41 @@ public class Story1_Detail extends Activity {
                         R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
                         R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
                     R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
-                    R.drawable.ic_launcher, R.drawable.ic_launcher};
+                    R.drawable.ic_launcher, R.drawable.ic_launcher ,R.drawable.ic_launcher};
 
+            i=0;
             query = "Select detail from story";
             Cursor cursor = helper.rawQuery(query);
             cursor.move(35);
             while (cursor.moveToNext()) {
-                if (i <16) {
+                if (i <15) {
                     String story_detail = cursor.getString(cursor.getColumnIndex("detail"));
                     str.add(story_detail);
+                    i++;
                 }
             }
             cursor.close();
             rank = (String[]) str.toArray(new String[str.size()]);
+
+            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp.start();
+            on = mp.isPlaying();
+
+            voice.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    if (on) {
+                        voice.setImageResource(R.drawable.voice_off);
+                        mp.stop();
+                    } else {
+                        voice.setImageResource(R.drawable.voice_on);
+                        mp = new MediaPlayer().create(Story1_Detail.this, R.raw.secret_love_song);
+                        mp.start();
+                    }
+                    on = !on;
+                }
+            });
             }
 
             else if (data.equals("pos5")) {
@@ -169,17 +271,39 @@ public class Story1_Detail extends Activity {
                         R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
                         R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,R.drawable.ic_launcher};
 
+            i=0;
             query = "Select detail from story";
             Cursor cursor = helper.rawQuery(query);
             cursor.move(50);
             while (cursor.moveToNext()) {
-                if (i <11) {
+                if (i <10) {
                     String story_detail = cursor.getString(cursor.getColumnIndex("detail"));
                     str.add(story_detail);
+                    i++;
                 }
             }
             cursor.close();
             rank = (String[]) str.toArray(new String[str.size()]);
+
+            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp.start();
+            on = mp.isPlaying();
+
+            voice.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    if (on) {
+                        voice.setImageResource(R.drawable.voice_off);
+                        mp.stop();
+                    } else {
+                        voice.setImageResource(R.drawable.voice_on);
+                        mp = new MediaPlayer().create(Story1_Detail.this, R.raw.secret_love_song);
+                        mp.start();
+                    }
+                    on = !on;
+                }
+            });
             }
 
 
@@ -188,4 +312,11 @@ public class Story1_Detail extends Activity {
             viewPager.setAdapter(adapter);
 
         }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        mp.stop();
     }
+    }
+

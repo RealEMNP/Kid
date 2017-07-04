@@ -81,9 +81,14 @@
         <activity
             android:name=".Setting"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="landscape"
             android:label="@string/title_activity_setting"
-            android:theme="@style/FullscreenTheme"/>
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".RateUs"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_rate_us"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

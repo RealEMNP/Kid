@@ -19,6 +19,7 @@
             android:id="@+id/img_btnBackPoem1"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
@@ -38,7 +39,7 @@
             android:id="@+id/img_btnPoem1On"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginLeft="480dp"
+            android:layout_marginLeft="470dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
@@ -54,9 +55,11 @@
             android:id="@+id/txtPoem1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="@color/black_overlay"
-            android:background="@drawable/ic_launcher" />
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
+            android:gravity="center"
+
+            />
     </LinearLayout>
 
 

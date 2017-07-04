@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin_viewpager"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,18 +9,23 @@
     android:background="#ffE4c4"
     tools:context="com.example.xray.kidsplanet.Story1_ViewPageAdapter">
 
+    <!--<include layout="@layout/activity_story1__detail"/>-->
+
     <TextView
         android:id="@+id/txtStory1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:gravity="center"
         />
     <ImageView
         android:id="@+id/imgStory1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/ic_launcher"/>
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="30dp"/>
 
 
 
