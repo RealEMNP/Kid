@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         imgbtnStory = (ImageButton) findViewById(R.id.img_btnStory);
         imgbtnPoem = (ImageButton) findViewById(R.id.img_btnPoem);
         imgbtnEdu = (ImageButton) findViewById(R.id.img_btnEdu);
-//        imgbtnSetting = (ImageButton) findViewById(R.id.btn_setting);
 
         imgbtnStory.setOnClickListener(new View.OnClickListener(){
 
@@ -57,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-//                Intent intent= new Intent(getApplicationContext(), Setting.class);
-//                startActivity(intent);
                 overridePendingTransition(R.anim.slide_down,R.anim.slide_down);
                 AlertDialog.Builder alertDialogBuilder;
                 alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
@@ -72,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 lp.copyFrom(alertDialog.getWindow().getAttributes());
                 lp.width = 800;
                 lp.height = 1000;
-//                lp.x = 170;
-//                lp.y = 100;
                 alertDialog.getWindow().setAttributes(lp);
             }
         });
