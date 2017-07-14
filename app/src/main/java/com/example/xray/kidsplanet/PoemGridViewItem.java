@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import mm.technomation.mmtext.mmtext;
 
 
 public class PoemGridViewItem extends BaseAdapter {
@@ -46,11 +47,13 @@ public class PoemGridViewItem extends BaseAdapter {
             TextView textView= (TextView) grid.findViewById(R.id.poem_grid_text);
             ImageView imageView= (ImageView) grid.findViewById(R.id.poem_grid_image);
             textView.setText(story[position]);
-            imageView.setImageResource(R.drawable.untitled3);
+            imageView.setImageResource(image[position]);
         }
         else {
             grid = (View) convertView;
         }
+        mmtext.prepareViewGroup(this.mContext,(ViewGroup) grid,mmtext.TEXT_UNICODE,true,false);
+
         return  grid;
     }
 }

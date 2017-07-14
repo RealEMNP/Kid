@@ -18,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:src="@drawable/back_1"
         android:adjustViewBounds="true"
@@ -27,8 +28,9 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:src="@drawable/story_header"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:layout_marginLeft="200dp"
+            android:layout_marginLeft="220dp"
             android:layout_marginRight="200dp"/>
     </LinearLayout>
     <LinearLayout
@@ -38,12 +40,11 @@
         >
         <GridView
             android:id="@+id/story_grid"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="70dp"
-            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:numColumns="3"
-
             android:gravity="center"
             android:columnWidth="100dp"
             >

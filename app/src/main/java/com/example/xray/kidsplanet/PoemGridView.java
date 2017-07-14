@@ -14,9 +14,9 @@ import android.widget.Toast;
 public class PoemGridView extends AppCompatActivity{
         GridView grid;
         ImageButton back;
-        String[] poem= {"ဖိနပ္ကေလး","လက္ေဆးျကစို့","ပုရြက္ဆိတ္","မနွင္းဆီ","ေဖေဖနဲ့ေမေမရယ္"};
-        int[] image={R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
-        R.drawable.ic_launcher};
+        String[] poem= {"ဥပုသ်စောင့်","တူတူရေဝါး","ရွှေခဲကြက်တူရွေး","ကြက်ဖတိန်ညင်","လယ်စောင့်တဲ"};
+        int[] image={R.drawable.shoes,R.drawable.watching_hand,R.drawable.ants,R.drawable.ma_hnin_se,
+        R.drawable.dad_n_mom};
 
 protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -39,27 +39,27 @@ protected void onCreate(Bundle savedInstanceState){
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 @Override
 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-           if(poem[position]=="ဖိနပ္ကေလး"){
+           if(poem[position]=="ဥပုသ်စောင့်"){
                    Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                    intent.putExtra("st1","pos1");
                    startActivity(intent);
            }
-        if(poem[position]=="လက္ေဆးျကစို့"){
+        if(poem[position]=="တူတူရေဝါး"){
                 Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                 intent.putExtra("st1","pos2");
                 startActivity(intent);
         }
-        if(poem[position]=="ပုရြက္ဆိတ္"){
+        if(poem[position]=="ရွှေခဲကြက်တူရွေး"){
                 Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                 intent.putExtra("st1","pos3");
                 startActivity(intent);
         }
-        if(poem[position]=="မနွင္းဆီ"){
+        if(poem[position]=="ကြက်ဖတိန်ညင်"){
                 Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                 intent.putExtra("st1","pos4");
                 startActivity(intent);
         }
-        if(poem[position]=="ေဖေဖနဲ့ေမေမရယ္"){
+        if(poem[position]=="လယ်စောင့်တဲ"){
                 Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                 intent.putExtra("st1","pos5");
                 startActivity(intent);

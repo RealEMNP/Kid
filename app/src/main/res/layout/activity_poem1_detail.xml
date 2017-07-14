@@ -18,7 +18,8 @@
         <ImageButton
             android:id="@+id/img_btnBackPoem1"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
@@ -29,7 +30,9 @@
         <ImageButton
             android:id="@+id/img_btnPoem1toHome"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
@@ -37,9 +40,10 @@
 
         <ImageButton
             android:id="@+id/img_btnPoem1On"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginLeft="470dp"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-5dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="#ffE4c4"
     android:weightSum="4"
     android:orientation="vertical"
     tools:context="com.example.xray.kidsplanet.EducationGridView1">
@@ -15,7 +15,8 @@
         <ImageButton
             android:id="@+id/img_btnBackEduGVD1"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
@@ -25,17 +26,21 @@
         <ImageButton
             android:id="@+id/img_btnEduGVD1toHome"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             android:src="@drawable/home_web" />
 
+
         <ImageButton
             android:id="@+id/img_btnEduGVD1On"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginLeft="470dp"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-5dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
@@ -47,26 +52,93 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3">
+
         <ImageButton
             android:id="@+id/img_btnBackward"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
             android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:src="@drawable/ic_first_page_black_24dp"/>
-        <ImageView
-            android:id="@+id/imgEduGVD1"
-            android:layout_width="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backward"
+            android:visibility="invisible" />
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="400dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="100dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="2">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/imgEduGVD1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginBottom="20dp" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<android.gesture.GestureOverlayView-->
+                    <!--android:id="@+id/gestures"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:fadeEnabled="false"-->
+                    <!--android:layout_marginTop="-70dp"-->
+                    <!--android:fadeOffset="500"-->
+                    <!--android:background="#fff"-->
+                    <!--android:gestureColor="#ffE4c4"-->
+                    <!--android:gestureStrokeType="single"-->
+                    <!--android:gestureStrokeWidth="20"-->
+                    <!--android:uncertainGestureColor="#000000">-->
+                <!--</android.gesture.GestureOverlayView>-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+
+
+        <android.gesture.GestureOverlayView
+            android:id="@+id/gestures"
+            android:layout_width="400dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_marginLeft="100dp"
+            android:fadeEnabled="false"
+            android:fadeOffset="500"
+            android:gestureColor="#ffE4c4"
+            android:gestureStrokeType="single"
+            android:gestureStrokeWidth="20"
+            android:uncertainGestureColor="#000000">
+
+            <ImageView
+                android:id="@+id/imgEduGVD1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1" />
+        </android.gesture.GestureOverlayView>
+
         <ImageButton
             android:id="@+id/img_btnForward"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_last_page_black_24dp"/>
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/forward" />
 
     </RelativeLayout>
 </LinearLayout>

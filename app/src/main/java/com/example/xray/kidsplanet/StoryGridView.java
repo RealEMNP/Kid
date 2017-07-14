@@ -12,9 +12,9 @@ import android.widget.ImageButton;
 public class StoryGridView extends AppCompatActivity{
     GridView grid;
     ImageButton back;
-    String[] story= new String[]{"စင္ဒရဲလား", "ဘဝင္ျမင့္ေသာဆင္ႀကီး", "ငေတြေဝႏွင့္ ယုန္ကေလး", "နတ္သမီးဆယ္ေယာက္", "ေ႐ွြလမွာ ဆန္ဖြပ္၍"};
-    int[] image={R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,R.drawable.ic_launcher,
-            R.drawable.ic_launcher};
+    String[] story= new String[]{"စင်ဒရဲလား", "ဘဝင်မြင့်သောဆင်ကြီး", "ငတွေဝေနှင့်ယုန်ကလေး", "နတ်သမီးဆယ်ယောက်", "ရွှေလမှာဆန်ဖွတ်၍"};
+    int[] image={R.mipmap.cindrella_7,R.mipmap.e_5,R.mipmap.lion_1,R.mipmap.a_6,
+            R.drawable.untitled3};
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -37,29 +37,29 @@ public class StoryGridView extends AppCompatActivity{
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (story[position]=="စင္ဒရဲလား"){
+                if (story[position]=="စင်ဒရဲလား"){
                     Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                      intent.putExtra("st1","pos1");
                     startActivity(intent);
                 }
-                if (story[position]=="ဘဝင္ျမင့္ေသာဆင္ႀကီး"){
+                if (story[position]=="ဘဝင်မြင့်သောဆင်ကြီး"){
                     Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                     intent.putExtra("st1","pos2");
 
                     startActivity(intent);
                 }
-                if (story[position]=="ငေတြေဝႏွင့္ ယုန္ကေလး"){
+                if (story[position]=="ငတွေဝေနှင့်ယုန်ကလေး"){
                     Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                     intent.putExtra("st1","pos3");
 
                     startActivity(intent);
                 }
-                if (story[position]=="နတ္သမီးဆယ္ေယာက္"){
+                if (story[position]=="နတ်သမီးဆယ်ယောက်"){
                     Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                     intent.putExtra("st1","pos4");
                     startActivity(intent);
                 }
-                if (story[position]=="ေ႐ွြလမွာ ဆန္ဖြပ္၍"){
+                if (story[position]=="ရွှေလမှာဆန်ဖွတ်၍"){
                     Intent intent= new Intent(getApplicationContext(), Story1_Detail.class);
                     intent.putExtra("st1","pos5");
                     startActivity(intent);

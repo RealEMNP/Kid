@@ -8,6 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import mm.technomation.mmtext.mmtext;
+
+import static com.example.xray.kidsplanet.R.layout.activity_story_grid_view_item;
+
 
 public class StoryGridViewItem extends BaseAdapter{
     private Context mContext;
@@ -41,17 +45,22 @@ public class StoryGridViewItem extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         View grid;
         LayoutInflater inflater= (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if(convertView== null){
+//        if(convertView== null){
             grid= new View(mContext);
-            grid=inflater.inflate(R.layout.activity_story_grid_view_item,null);
+            grid=inflater.inflate(activity_story_grid_view_item,null);
             TextView textView= (TextView) grid.findViewById(R.id.story_grid_text);
             ImageView imageView= (ImageView) grid.findViewById(R.id.story_grid_image);
             textView.setText(story[position]);
-            imageView.setImageResource(R.drawable.untitled3);
-        }
-        else {
-            grid = (View) convertView;
-        }
+            imageView.setImageResource(image[position]);
+//        }
+//        else {
+//            grid = (View) convertView;
+//        }
+
+        mmtext.prepareViewGroup(this.mContext,(ViewGroup) grid,mmtext.TEXT_UNICODE,true,false);
+
         return  grid;
     }
+
+
 }

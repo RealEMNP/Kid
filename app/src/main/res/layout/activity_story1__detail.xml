@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,42 +7,6 @@
     tools:context="com.example.xray.kidsplanet.Story1_Detail"
     android:weightSum="2"
     android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-
-        >
-        <ImageButton
-            android:id="@+id/img_btnBackStory1"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/back_1"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent"/>
-
-        <ImageButton
-            android:id="@+id/img_btnStory1toHome"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:src="@drawable/home_web"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent"/>
-
-        <ImageButton
-            android:id="@+id/img_btnStory1On"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="470dp"
-            android:adjustViewBounds="true"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/voice_on" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,9 +17,53 @@
             android:id="@+id/pager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_marginRight="-10dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginTop="-10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/img_btnBackStory1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back_1" />
+
+        <ImageButton
+            android:id="@+id/img_btnStory1toHome"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_web" />
+
+        <ImageButton
+            android:id="@+id/img_btnStory1On"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-5dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/voice_on" />
     </LinearLayout>
 
 
-
-</LinearLayout>
+</RelativeLayout>

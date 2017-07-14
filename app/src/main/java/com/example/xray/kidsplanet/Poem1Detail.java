@@ -7,8 +7,11 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import mm.technomation.mmtext.mmtext;
 
 
 public class Poem1Detail extends AppCompatActivity {
@@ -25,10 +28,14 @@ public class Poem1Detail extends AppCompatActivity {
         setContentView(R.layout.activity_poem1_detail);
         getSupportActionBar().hide();
 
+
+
         helper = DataBaseHelper.getInstance(this, DB_Name);
 
         final ImageButton back, home , voice;
-        TextView txt1;
+        TextView txt1 ;
+
+
         back = (ImageButton) findViewById(R.id.img_btnBackPoem1);
         home = (ImageButton) findViewById(R.id.img_btnPoem1toHome);
         voice = (ImageButton) findViewById(R.id.img_btnPoem1On);
@@ -43,11 +50,14 @@ public class Poem1Detail extends AppCompatActivity {
                 if (cursor.moveToFirst()) {
                   poem_detail=cursor.getString(cursor.getColumnIndex("detail"));
                 }
+
             txt1.setText(poem_detail);
-            txt1.setBackgroundResource(R.drawable.ic_launcher);
+
+//            txt1.setBackgroundResource(R.drawable.ic_launcher);
+            txt1.setBackgroundResource(R.drawable.shoes);
             txt1.setTextColor(Color.BLACK);
 
-            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp = new MediaPlayer().create(this, R.raw.pha_nat_ka_lay);
             mp.start();
             on = mp.isPlaying();
 
@@ -60,7 +70,7 @@ public class Poem1Detail extends AppCompatActivity {
                         mp.stop();
                     } else {
                         voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.secret_love_song);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.pha_nat_ka_lay);
                         mp.start();
                     }
                     on = !on;
@@ -68,18 +78,20 @@ public class Poem1Detail extends AppCompatActivity {
             });
         }
 
-        else if(data.equals("pos2")){
+        if(data.equals("pos2")){
             query = "Select detail from poem where poem_ID='p2'";
             Cursor cursor = DataBaseHelper.rawQuery(query);
 
             if (cursor.moveToFirst()) {
                 poem_detail=cursor.getString(cursor.getColumnIndex("detail"));
             }
+
             txt1.setText(poem_detail);
-            txt1.setBackgroundResource(R.drawable.washing_hand);
+//            txt1.setBackgroundResource(R.drawable.ic_launcher);
+            txt1.setBackgroundResource(R.drawable.watching_hand);
             txt1.setTextColor(Color.BLACK);
 
-            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp = new MediaPlayer().create(this, R.raw.lat_say_kya_so);
             mp.start();
             on = mp.isPlaying();
 
@@ -92,14 +104,14 @@ public class Poem1Detail extends AppCompatActivity {
                         mp.stop();
                     } else {
                         voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.secret_love_song);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.lat_say_kya_so);
                         mp.start();
                     }
                     on = !on;
                 }
             });
         }
-        else if(data.equals("pos3")){
+         if(data.equals("pos3")){
             query = "Select detail from poem where poem_ID='p3'";
             Cursor cursor = DataBaseHelper.rawQuery(query);
 
@@ -107,10 +119,11 @@ public class Poem1Detail extends AppCompatActivity {
                 poem_detail=cursor.getString(cursor.getColumnIndex("detail"));
             }
             txt1.setText(poem_detail);
-            txt1.setBackgroundResource(R.drawable.ic_launcher);
+//             txt1.setBackgroundResource(R.drawable.ic_launcher);
+            txt1.setBackgroundResource(R.drawable.ants);
             txt1.setTextColor(Color.BLACK);
 
-            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp = new MediaPlayer().create(this, R.raw.ant);
             mp.start();
             on = mp.isPlaying();
 
@@ -123,14 +136,14 @@ public class Poem1Detail extends AppCompatActivity {
                         mp.stop();
                     } else {
                         voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.secret_love_song);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.ant);
                         mp.start();
                     }
                     on = !on;
                 }
             });
         }
-        else if(data.equals("pos4")){
+        if(data.equals("pos4")){
             query = "Select detail from poem where poem_ID='p4'";
             Cursor cursor = DataBaseHelper.rawQuery(query);
 
@@ -138,10 +151,11 @@ public class Poem1Detail extends AppCompatActivity {
                 poem_detail=cursor.getString(cursor.getColumnIndex("detail"));
             }
             txt1.setText(poem_detail);
-            txt1.setBackgroundResource(R.drawable.ic_launcher);
+//            txt1.setBackgroundResource(R.drawable.ic_launcher);
+            txt1.setBackgroundResource(R.drawable.ma_hnin_se);
             txt1.setTextColor(Color.BLACK);
 
-            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp = new MediaPlayer().create(this, R.raw.ma_hnin_si);
             mp.start();
             on = mp.isPlaying();
 
@@ -154,14 +168,14 @@ public class Poem1Detail extends AppCompatActivity {
                         mp.stop();
                     } else {
                         voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.secret_love_song);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.ma_hnin_si);
                         mp.start();
                     }
                     on = !on;
                 }
             });
         }
-        else if(data.equals("pos5")){
+        if(data.equals("pos5")){
             query = "Select detail from poem where poem_ID='p5'";
             Cursor cursor = DataBaseHelper.rawQuery(query);
 
@@ -169,10 +183,11 @@ public class Poem1Detail extends AppCompatActivity {
                 poem_detail=cursor.getString(cursor.getColumnIndex("detail"));
             }
             txt1.setText(poem_detail);
-            txt1.setBackgroundResource(R.drawable.ic_launcher);
+//            txt1.setBackgroundResource(R.drawable.ic_launcher);
+            txt1.setBackgroundResource(R.drawable.dad_n_mom);
             txt1.setTextColor(Color.BLACK);
 
-            mp = new MediaPlayer().create(this, R.raw.secret_love_song);
+            mp = new MediaPlayer().create(this, R.raw.phayphay_nae_maymay);
             mp.start();
             on = mp.isPlaying();
 
@@ -185,13 +200,14 @@ public class Poem1Detail extends AppCompatActivity {
                         mp.stop();
                     } else {
                         voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.secret_love_song);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.phayphay_nae_maymay);
                         mp.start();
                     }
                     on = !on;
                 }
             });
         }
+        mmtext.prepareActivity(this,mmtext.TEXT_UNICODE,true,true);
 
         back.setOnClickListener(new View.OnClickListener() {
 

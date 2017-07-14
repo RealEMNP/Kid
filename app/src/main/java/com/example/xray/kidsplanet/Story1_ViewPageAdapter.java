@@ -1,34 +1,32 @@
 package com.example.xray.kidsplanet;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
+import mm.technomation.mmtext.mmtext;
 
 class Story1_ViewPageAdapter extends PagerAdapter {
+
+
 
     Context context;
     String[] rank;
     int[] flag;
-//    int[] song;
     LayoutInflater inflater;
 
 
-    public Story1_ViewPageAdapter(Context context, String[] rank, int[] flag) {
+    public Story1_ViewPageAdapter(Context context,String[] rank, int[] flag) {
         this.context = context;
         this.rank = rank;
         this.flag = flag;
-//        this.song = song;
     }
 
     @Override
@@ -44,11 +42,9 @@ class Story1_ViewPageAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-        // Declare Variables
+
         TextView txtrank;
         ImageView imgflag;
-//        ImageButton img_song;
-
 
 
 
@@ -62,16 +58,9 @@ class Story1_ViewPageAdapter extends PagerAdapter {
         txtrank.setText(rank[position]);
         imgflag = (ImageView) itemView.findViewById(R.id.imgStory1);
         imgflag.setImageResource(flag[position]);
-//        img_song = (ImageButton) itemView.findViewById(R.id.img_btnStory1On);
-
-
-
+        mmtext.prepareViewGroup(this.context,(ViewGroup)itemView, mmtext.TEXT_UNICODE,true,true);
         ((ViewPager) container).addView(itemView);
 
-//        LinearLayout ll = (LinearLayout)itemView.findViewById(R.id.lin_viewpager);
-//        ImageButton newButton = new ImageButton(context);
-//        newButton.setImageResource(R.drawable.voice_on);
-//        ll.addView(newButton);
 
         return itemView;
     }
@@ -82,4 +71,7 @@ class Story1_ViewPageAdapter extends PagerAdapter {
         ((ViewPager) container).removeView(((LinearLayout) object));
 
     }
+
+
+
 }
