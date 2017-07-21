@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import mm.technomation.mmtext.mmtext;
@@ -34,12 +35,14 @@ public class Poem1Detail extends AppCompatActivity {
 
         final ImageButton back, home , voice;
         TextView txt1 ;
+        ImageView imageView;
 
 
         back = (ImageButton) findViewById(R.id.img_btnBackPoem1);
         home = (ImageButton) findViewById(R.id.img_btnPoem1toHome);
         voice = (ImageButton) findViewById(R.id.img_btnPoem1On);
         txt1 = (TextView) findViewById(R.id.txtPoem1);
+        imageView = (ImageView) findViewById(R.id.img_poem);
         Bundle extras=getIntent().getExtras();
         data=extras.getString("st1");
 
@@ -53,9 +56,8 @@ public class Poem1Detail extends AppCompatActivity {
 
             txt1.setText(poem_detail);
 
-//            txt1.setBackgroundResource(R.drawable.ic_launcher);
-            txt1.setBackgroundResource(R.drawable.shoes);
             txt1.setTextColor(Color.BLACK);
+            imageView.setImageResource(R.mipmap.sone_oak_ni_ni);
 
             mp = new MediaPlayer().create(this, R.raw.pha_nat_ka_lay);
             mp.start();
@@ -87,9 +89,8 @@ public class Poem1Detail extends AppCompatActivity {
             }
 
             txt1.setText(poem_detail);
-//            txt1.setBackgroundResource(R.drawable.ic_launcher);
-            txt1.setBackgroundResource(R.drawable.watching_hand);
             txt1.setTextColor(Color.BLACK);
+            imageView.setImageResource(R.mipmap.totoyaywar);
 
             mp = new MediaPlayer().create(this, R.raw.lat_say_kya_so);
             mp.start();
@@ -119,9 +120,8 @@ public class Poem1Detail extends AppCompatActivity {
                 poem_detail=cursor.getString(cursor.getColumnIndex("detail"));
             }
             txt1.setText(poem_detail);
-//             txt1.setBackgroundResource(R.drawable.ic_launcher);
-            txt1.setBackgroundResource(R.drawable.ants);
             txt1.setTextColor(Color.BLACK);
+             imageView.setImageResource(R.mipmap.parrot);
 
             mp = new MediaPlayer().create(this, R.raw.ant);
             mp.start();
@@ -151,11 +151,10 @@ public class Poem1Detail extends AppCompatActivity {
                 poem_detail=cursor.getString(cursor.getColumnIndex("detail"));
             }
             txt1.setText(poem_detail);
-//            txt1.setBackgroundResource(R.drawable.ic_launcher);
-            txt1.setBackgroundResource(R.drawable.ma_hnin_se);
             txt1.setTextColor(Color.BLACK);
+            imageView.setImageResource(R.mipmap.kyat_pha_tain_nyine);
 
-            mp = new MediaPlayer().create(this, R.raw.ma_hnin_si);
+            mp = new MediaPlayer().create(this, R.raw.kyat_pha_tane_nyin);
             mp.start();
             on = mp.isPlaying();
 
@@ -168,7 +167,7 @@ public class Poem1Detail extends AppCompatActivity {
                         mp.stop();
                     } else {
                         voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.ma_hnin_si);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.kyat_pha_tane_nyin);
                         mp.start();
                     }
                     on = !on;
@@ -183,9 +182,8 @@ public class Poem1Detail extends AppCompatActivity {
                 poem_detail=cursor.getString(cursor.getColumnIndex("detail"));
             }
             txt1.setText(poem_detail);
-//            txt1.setBackgroundResource(R.drawable.ic_launcher);
-            txt1.setBackgroundResource(R.drawable.dad_n_mom);
             txt1.setTextColor(Color.BLACK);
+            imageView.setImageResource(R.mipmap.lal_sount_tae);
 
             mp = new MediaPlayer().create(this, R.raw.phayphay_nae_maymay);
             mp.start();
@@ -227,7 +225,6 @@ public class Poem1Detail extends AppCompatActivity {
                 mp.stop();
             }
         });
-
     }
 
     @Override

@@ -7,27 +7,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
     android:padding="10dp"
-    android:background="#ffE4c4"
+    android:background="#F0F8FF"
     tools:context="com.example.xray.kidsplanet.Story1_ViewPageAdapter">
 
-    <!--<include layout="@layout/activity_story1__detail"/>-->
+        <TextView
+            android:id="@+id/txtStory1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="50dp"
+            android:layout_weight="1"
+            android:lineSpacingExtra="5dp"
+            android:gravity="center"
+            />
+        <ImageView
+            android:id="@+id/imgStory1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            />
 
-    <TextView
-        android:id="@+id/txtStory1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="50dp"
-        android:layout_weight="1"
-        android:lineSpacingExtra="5dp"
-        android:gravity="center"
-        />
-    <ImageView
-        android:id="@+id/imgStory1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        />
+
+
 
 </LinearLayout>

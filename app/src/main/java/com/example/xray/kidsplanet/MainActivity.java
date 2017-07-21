@@ -56,20 +56,22 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                overridePendingTransition(R.anim.slide_down,R.anim.slide_down);
+//                overridePendingTransition(R.anim.slide_down,R.anim.slide_down);
                 AlertDialog.Builder alertDialogBuilder;
-                alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+                alertDialogBuilder = new AlertDialog.Builder(MainActivity.this,R.style.MyAlertDialogStyle);
                 alertDialogBuilder.setMessage("\t\t\t\t\t"+"Developed by:" + "\tX-Ray" + "\n\n\t\t\t\t\t\t"+"Email Address:"+"\n"+
                         "bokyawabbk@gmail.com" +"\n"+"sandar1990.s4@gmail.com"+"\n"+"eieikhaingthin2587@gmail.com"+"\n"+"ehmunaphoe18@gmail.com"+"\n\n"+
                         "Computer University Taungoo" + "\n\n\t\t\t\t\t\t\t" + "Version 1.0"+"\n\n"+"Credit to: Original Uploader");
 
                 AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.getWindow().getAttributes().windowAnimations=R.style.DialogAnimation;
                 alertDialog.show();
                 WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
                 lp.copyFrom(alertDialog.getWindow().getAttributes());
                 lp.width = 800;
                 lp.height = 1000;
                 alertDialog.getWindow().setAttributes(lp);
+
             }
         });
 

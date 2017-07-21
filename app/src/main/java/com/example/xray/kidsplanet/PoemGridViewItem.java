@@ -12,15 +12,21 @@ import mm.technomation.mmtext.mmtext;
 
 
 public class PoemGridViewItem extends BaseAdapter {
+
+
     private Context mContext;
     private final String[] story;
     private final int[] image;
+
+
 
     public PoemGridViewItem(Context c, String[] story, int[] image){
         mContext=c;
         this.image=image;
         this.story=story;
     }
+
+
 
     @Override
     public int getCount() {

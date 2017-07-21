@@ -89,10 +89,9 @@ public class Story1_Detail extends Activity {
                     R.raw.cinderalla_4,R.raw.cinderalla_5, R.raw.cinderalla_6,  R.raw.cinderalla_7,
                     R.raw.cinderalla_8,  R.raw.cinderalla_9};
 
-            flag = new int[]{R.mipmap.cindrella_1, R.mipmap.cindrella_2,
-                    R.mipmap.cindrella_3 ,R.mipmap.cindrella_4,
-                    R.mipmap.cindrella_5, R.mipmap.cindrella_6, R.mipmap.cindrella_7,
-                    R.mipmap.cindrella_8, R.mipmap.cindrella_9, R.mipmap.cindrella_10};
+            flag = new int[]{R.mipmap.c_1,R.mipmap.c_2, R.mipmap.c_3,
+                    R.mipmap.c_4,R.mipmap.c_5, R.mipmap.c_6,  R.mipmap.c_7,R.mipmap.c_8,
+                    R.mipmap.c_final,  R.drawable.ic_launcher};
 
             i=0;
             query = "Select detail from story";
@@ -168,10 +167,10 @@ public class Story1_Detail extends Activity {
                     R.raw.elephant_8,  R.raw.elephant_9,R.raw.elephant_10,R.raw.elephant_11, R.raw.elephant_12};
 
             flag = new int[]{R.mipmap.e_1, R.mipmap.e_2,
-                        R.mipmap.e_3, R.mipmap.e_5,
-                        R.mipmap.e_5, R.mipmap.e_5, R.mipmap.e_5,
+                        R.mipmap.e_3, R.mipmap.e_4,
                         R.mipmap.e_5, R.mipmap.e_6, R.mipmap.e_7,
-                        R.mipmap.e_final, R.mipmap.e_final, R.mipmap.e_final};
+                        R.mipmap.e_8, R.mipmap.e_9, R.mipmap.e_10,
+                        R.mipmap.e_11, R.mipmap.e_final, R.mipmap.e_final};
 
             i=0;
             query = "Select detail from story";
@@ -247,10 +246,10 @@ public class Story1_Detail extends Activity {
                     R.raw.lion_4,R.raw.lion_5, R.raw.lion_6,  R.raw.lion_7,
                     R.raw.lion_8,  R.raw.lion_9,R.raw.lion_10,R.raw.lion_11, R.raw.lion_12};
 
-            flag = new int[]{R.mipmap.lion_1, R.mipmap.lion_2, R.mipmap.lion_3,
-                        R.mipmap.lion_3, R.mipmap.lion_4, R.mipmap.lion_5,
-                        R.mipmap.lion_5, R.mipmap.lion_6, R.mipmap.lion_6,
-                        R.mipmap.lion_6, R.mipmap.lion_7, R.mipmap.lion_8,R.mipmap.lion_9};
+            flag = new int[]{R.mipmap.lion_1, R.mipmap.lion_2_3,R.mipmap.lion_2_3, R.mipmap.lion_4,
+                        R.mipmap.lion_5, R.mipmap.lion_6, R.mipmap.lion_7,
+                        R.mipmap.lion_8, R.mipmap.lion_9_10, R.mipmap.lion_9_10,
+                        R.mipmap.lion_11, R.mipmap.lion_final, R.mipmap.lion_final};
 
             i=0;
             query = "Select detail from story";
@@ -329,10 +328,9 @@ public class Story1_Detail extends Activity {
 
 
             flag = new int[]{R.mipmap.a_1, R.mipmap.a_2, R.mipmap.a_3,
-                    R.mipmap.a_4, R.mipmap.a_4, R.mipmap.a_5,
-                    R.mipmap.a_5, R.mipmap.a_5, R.mipmap.a_6,
-                    R.mipmap.a_6, R.mipmap.a_6, R.mipmap.a_7,R.mipmap.a_7,R.mipmap.a_final,
-                    R.mipmap.a_final,R.mipmap.a_final};
+                    R.mipmap.a_4, R.mipmap.a_5, R.mipmap.a_6,
+                    R.mipmap.a_7,R.mipmap.a_8,R.mipmap.a_9, R.mipmap.a_10_11, R.mipmap.a_10_11,R.mipmap.a_12,R.mipmap.a_13,
+                    R.mipmap.a_final,R.mipmap.a_final,R.drawable.ic_launcher};
 
             i=0;
             query = "Select detail from story";
@@ -406,10 +404,9 @@ public class Story1_Detail extends Activity {
                     R.raw.moon_4,R.raw.moon_5, R.raw.moon_6,  R.raw.moon_7,
                     R.raw.moon_8,  R.raw.moon_9,R.raw.moon_10};
 
-            flag = new int[]{R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,
-                        R.drawable.ic_launcher, R.drawable.ic_launcher, R.drawable.ic_launcher,R.drawable.ic_launcher};
+            flag = new int[]{R.mipmap.s_1, R.mipmap.s_2,
+                    R.mipmap.s_3, R.mipmap.s_4, R.mipmap.s_5, R.mipmap.s_6, R.mipmap.s_7, R.mipmap.s_8,
+                    R.mipmap.s_9, R.mipmap.s_10,R.drawable.ic_launcher};
 
             i=0;
             query = "Select detail from story";

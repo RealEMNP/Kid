@@ -13,8 +13,8 @@ public class StoryGridView extends AppCompatActivity{
     GridView grid;
     ImageButton back;
     String[] story= new String[]{"စင်ဒရဲလား", "ဘဝင်မြင့်သောဆင်ကြီး", "ငတွေဝေနှင့်ယုန်ကလေး", "နတ်သမီးဆယ်ယောက်", "ရွှေလမှာဆန်ဖွတ်၍"};
-    int[] image={R.mipmap.cindrella_7,R.mipmap.e_5,R.mipmap.lion_1,R.mipmap.a_6,
-            R.drawable.untitled3};
+    int[] image={R.mipmap.c_final,R.mipmap.e_6,R.mipmap.lion_9_10,R.mipmap.a_8,
+            R.mipmap.s_10};
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

@@ -16,10 +16,6 @@ public class EducationGridView1 extends AppCompatActivity {
     int count = 0;
     private GestureOverlayView gesture;
 
-//    GestureOverlayView gestureOverlayView;
-//    private Bitmap bitmap;
-
-
     static final int image1[] = {R.drawable.zero, R.drawable.one , R.drawable.two,
             R.drawable.three, R.drawable.four, R.drawable.five,
             R.drawable.six, R.drawable.seven, R.drawable.eight,R.drawable.nine};
@@ -42,7 +38,6 @@ public class EducationGridView1 extends AppCompatActivity {
 
         final ImageView imgview = (ImageView) findViewById(R.id.imgEduGVD1);
         gesture = (GestureOverlayView) findViewById(R.id.gestures);
-//        gestureOverlayView = (GestureOverlayView) findViewById()
         back = (ImageButton) findViewById(R.id.img_btnBackEduGVD1);
         home = (ImageButton) findViewById(R.id.img_btnEduGVD1toHome);
         voice = (ImageButton) findViewById(R.id.img_btnEduGVD1On);
@@ -90,15 +85,21 @@ public class EducationGridView1 extends AppCompatActivity {
                 public void onClick(View v) {
                     backward.setVisibility(View.VISIBLE);
                     if(count==8){
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         forward.setVisibility(View.INVISIBLE);
 
                     }
 
                     if(count<image1.length-1){
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         ++count;
                         imgview.setImageResource(image1[count]);
                     }
                     else {
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         imgview.setImageResource(image1[0]);
                     }
                 }
@@ -109,11 +110,15 @@ public class EducationGridView1 extends AppCompatActivity {
                 public void onClick(View v) {
                     --count;
                     if(count == 0) {
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         backward.setVisibility(View.INVISIBLE);
                         forward.setVisibility(View.VISIBLE);
                         imgview.setImageResource(image1[count]);
                     }
                     else {
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         imgview.setImageResource(image1[count]);
                         forward.setVisibility(View.VISIBLE);
                     }
@@ -129,15 +134,21 @@ public class EducationGridView1 extends AppCompatActivity {
                 public void onClick(View v) {
                     backward.setVisibility(View.VISIBLE);
                     if(count==24){
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         forward.setVisibility(View.INVISIBLE);
 
                     }
 
                     if(count<image2.length-1){
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         ++count;
                         imgview.setImageResource(image2[count]);
                     }
                     else {
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         imgview.setImageResource(image2[0]);
                     }
                 }
@@ -148,11 +159,15 @@ public class EducationGridView1 extends AppCompatActivity {
                 public void onClick(View v) {
                     --count;
                     if(count == 0) {
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         backward.setVisibility(View.INVISIBLE);
                         forward.setVisibility(View.VISIBLE);
                         imgview.setImageResource(image2[count]);
                     }
                     else {
+                        gesture.cancelClearAnimation();
+                        gesture.clear(true);
                         imgview.setImageResource(image2[count]);
                         forward.setVisibility(View.VISIBLE);
                     }

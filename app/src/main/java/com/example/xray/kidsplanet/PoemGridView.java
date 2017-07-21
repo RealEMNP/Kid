@@ -15,8 +15,8 @@ public class PoemGridView extends AppCompatActivity{
         GridView grid;
         ImageButton back;
         String[] poem= {"ဥပုသ်စောင့်","တူတူရေဝါး","ရွှေခဲကြက်တူရွေး","ကြက်ဖတိန်ညင်","လယ်စောင့်တဲ"};
-        int[] image={R.drawable.shoes,R.drawable.watching_hand,R.drawable.ants,R.drawable.ma_hnin_se,
-        R.drawable.dad_n_mom};
+        int[] image={R.mipmap.sone_oak_ni_ni,R.mipmap.totoyaywar,R.mipmap.parrot,R.mipmap.kyat_pha_tain_nyine,
+        R.mipmap.lal_sount_tae};
 
 protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

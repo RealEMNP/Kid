@@ -66,48 +66,6 @@
             android:src="@drawable/backward"
             android:visibility="invisible" />
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="400dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_marginLeft="100dp"-->
-            <!--android:orientation="horizontal"-->
-            <!--android:weightSum="2">-->
-
-            <!--<LinearLayout-->
-                <!--android:layout_width="200dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1">-->
-
-                <!--<ImageView-->
-                    <!--android:id="@+id/imgEduGVD1"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:layout_marginBottom="20dp" />-->
-            <!--</LinearLayout>-->
-
-            <!--<LinearLayout-->
-                <!--android:layout_width="200dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1">-->
-
-                <!--<android.gesture.GestureOverlayView-->
-                    <!--android:id="@+id/gestures"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:fadeEnabled="false"-->
-                    <!--android:layout_marginTop="-70dp"-->
-                    <!--android:fadeOffset="500"-->
-                    <!--android:background="#fff"-->
-                    <!--android:gestureColor="#ffE4c4"-->
-                    <!--android:gestureStrokeType="single"-->
-                    <!--android:gestureStrokeWidth="20"-->
-                    <!--android:uncertainGestureColor="#000000">-->
-                <!--</android.gesture.GestureOverlayView>-->
-            <!--</LinearLayout>-->
-        <!--</LinearLayout>-->
-
-
-
         <android.gesture.GestureOverlayView
             android:id="@+id/gestures"
             android:layout_width="400dp"
@@ -116,8 +74,8 @@
             android:fadeEnabled="false"
             android:fadeOffset="500"
             android:gestureColor="#ffE4c4"
-            android:gestureStrokeType="single"
-            android:gestureStrokeWidth="20"
+            android:gestureStrokeType="multiple"
+            android:gestureStrokeWidth="40"
             android:uncertainGestureColor="#000000">
 
             <ImageView
