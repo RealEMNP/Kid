@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffE4c4"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context="com.example.xray.kidsplanet.StoryGridViewItem">
@@ -13,11 +12,13 @@
         android:layout_height="100dp"
         android:background="@layout/stroke"
         android:scaleType="fitXY"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        />
     <TextView
         android:id="@+id/story_grid_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#fff"
         android:layout_marginTop="-6dp"
         android:layout_marginBottom="5dp"
         android:textSize="15sp"/>

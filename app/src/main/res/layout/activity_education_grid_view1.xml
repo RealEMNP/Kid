@@ -21,7 +21,7 @@
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/back_1" />
+            android:src="@drawable/back_icon" />
 
         <ImageButton
             android:id="@+id/img_btnEduGVD1toHome"
@@ -32,19 +32,19 @@
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home_web" />
+            android:src="@drawable/home_icon" />
 
 
-        <ImageButton
-            android:id="@+id/img_btnEduGVD1On"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="-5dp"
-            android:adjustViewBounds="true"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/voice_on" />
+        <!--<ImageButton-->
+            <!--android:id="@+id/img_btnEduGVD1On"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginLeft="-5dp"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:background="@android:color/transparent"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:src="@drawable/music_on" />-->
 
     </LinearLayout>
 
@@ -63,9 +63,8 @@
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/backward"
+            android:src="@drawable/backward_icon"
             android:visibility="invisible" />
-
         <android.gesture.GestureOverlayView
             android:id="@+id/gestures"
             android:layout_width="400dp"
@@ -78,13 +77,17 @@
             android:gestureStrokeWidth="40"
             android:uncertainGestureColor="#000000">
 
+
             <ImageView
                 android:id="@+id/imgEduGVD1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1" />
+
+
         </android.gesture.GestureOverlayView>
+
 
         <ImageButton
             android:id="@+id/img_btnForward"
@@ -96,7 +99,7 @@
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/forward" />
+            android:src="@drawable/forward_icon" />
 
     </RelativeLayout>
 </LinearLayout>

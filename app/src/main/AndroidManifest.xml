@@ -78,6 +78,8 @@
             android:label="@string/title_activity_story1__view_pager_adapter"
             android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme" />
+        <activity android:name=".About_Us"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

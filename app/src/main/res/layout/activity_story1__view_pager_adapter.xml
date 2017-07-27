@@ -6,19 +6,33 @@
     android:layout_height="fill_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
+    android:weightSum="2"
     android:padding="10dp"
+    android:orientation="horizontal"
     android:background="#F0F8FF"
     tools:context="com.example.xray.kidsplanet.Story1_ViewPageAdapter">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
         <TextView
             android:id="@+id/txtStory1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="50dp"
             android:layout_weight="1"
-            android:lineSpacingExtra="5dp"
             android:gravity="center"
-            />
+            android:lineSpacingExtra="5dp"
+            android:paddingTop="50dp"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1">
         <ImageView
             android:id="@+id/imgStory1"
             android:layout_width="match_parent"
@@ -27,8 +41,6 @@
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
             />
-
-
-
+    </RelativeLayout>
 
 </LinearLayout>

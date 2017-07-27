@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffE4c4"
     tools:context="com.example.xray.kidsplanet.Poem1Detail"
     android:weightSum="2"
+    android:background="#F0F8FF"
     android:orientation="vertical">
 
     <LinearLayout
@@ -60,7 +60,7 @@
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/back_1" />
+            android:src="@drawable/back_icon" />
 
 
         <ImageButton
@@ -72,7 +72,7 @@
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/home_web" />
+            android:src="@drawable/home_icon" />
 
         <ImageButton
             android:id="@+id/img_btnPoem1On"
@@ -83,7 +83,7 @@
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/voice_on" />
+            android:src="@drawable/music_on" />
     </LinearLayout>
 
 

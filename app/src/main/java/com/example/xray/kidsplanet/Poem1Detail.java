@@ -59,7 +59,7 @@ public class Poem1Detail extends AppCompatActivity {
             txt1.setTextColor(Color.BLACK);
             imageView.setImageResource(R.mipmap.sone_oak_ni_ni);
 
-            mp = new MediaPlayer().create(this, R.raw.pha_nat_ka_lay);
+            mp = new MediaPlayer().create(this, R.raw.sone_oak_ni_ni);
             mp.start();
             on = mp.isPlaying();
 
@@ -68,11 +68,11 @@ public class Poem1Detail extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.pha_nat_ka_lay);
+                        voice.setImageResource(R.drawable.music_on);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.sone_oak_ni_ni);
                         mp.start();
                     }
                     on = !on;
@@ -92,7 +92,7 @@ public class Poem1Detail extends AppCompatActivity {
             txt1.setTextColor(Color.BLACK);
             imageView.setImageResource(R.mipmap.totoyaywar);
 
-            mp = new MediaPlayer().create(this, R.raw.lat_say_kya_so);
+            mp = new MediaPlayer().create(this, R.raw.tu_tu_yay_war);
             mp.start();
             on = mp.isPlaying();
 
@@ -101,11 +101,11 @@ public class Poem1Detail extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.lat_say_kya_so);
+                        voice.setImageResource(R.drawable.music_on);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.tu_tu_yay_war);
                         mp.start();
                     }
                     on = !on;
@@ -123,7 +123,7 @@ public class Poem1Detail extends AppCompatActivity {
             txt1.setTextColor(Color.BLACK);
              imageView.setImageResource(R.mipmap.parrot);
 
-            mp = new MediaPlayer().create(this, R.raw.ant);
+            mp = new MediaPlayer().create(this, R.raw.parrot);
             mp.start();
             on = mp.isPlaying();
 
@@ -132,11 +132,11 @@ public class Poem1Detail extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.ant);
+                        voice.setImageResource(R.drawable.music_on);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.parrot);
                         mp.start();
                     }
                     on = !on;
@@ -163,10 +163,10 @@ public class Poem1Detail extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
+                        voice.setImageResource(R.drawable.music_on);
                         mp = new MediaPlayer().create(Poem1Detail.this, R.raw.kyat_pha_tane_nyin);
                         mp.start();
                     }
@@ -185,7 +185,7 @@ public class Poem1Detail extends AppCompatActivity {
             txt1.setTextColor(Color.BLACK);
             imageView.setImageResource(R.mipmap.lal_sount_tae);
 
-            mp = new MediaPlayer().create(this, R.raw.phayphay_nae_maymay);
+            mp = new MediaPlayer().create(this, R.raw.lal_sont_tal);
             mp.start();
             on = mp.isPlaying();
 
@@ -194,11 +194,11 @@ public class Poem1Detail extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
-                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.phayphay_nae_maymay);
+                        voice.setImageResource(R.drawable.music_on);
+                        mp = new MediaPlayer().create(Poem1Detail.this, R.raw.lal_sont_tal);
                         mp.start();
                     }
                     on = !on;

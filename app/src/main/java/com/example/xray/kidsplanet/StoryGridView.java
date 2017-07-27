@@ -33,6 +33,7 @@ public class StoryGridView extends AppCompatActivity{
         StoryGridViewItem adapter=new StoryGridViewItem(StoryGridView.this, story, image);
 
         grid=(GridView) findViewById(R.id.story_grid);
+        grid.setVerticalScrollBarEnabled(true);
         grid.setAdapter(adapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override

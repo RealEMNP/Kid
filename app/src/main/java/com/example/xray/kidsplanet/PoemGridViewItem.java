@@ -1,6 +1,7 @@
 package com.example.xray.kidsplanet;
 
 import android.content.Context;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,22 +16,28 @@ public class PoemGridViewItem extends BaseAdapter {
 
 
     private Context mContext;
-    private final String[] story;
-    private final int[] image;
+    public  String[] poem;
+    private  int[] image;
 
 
 
-    public PoemGridViewItem(Context c, String[] story, int[] image){
+    public PoemGridViewItem(Context c, String[] poem, int[] image){
         mContext=c;
         this.image=image;
-        this.story=story;
+        this.poem=poem;
     }
 
+    public PoemGridViewItem(String[] poem, int[] image) {
+        this.poem = poem;
+        this.image = image;
+    }
 
+    public PoemGridViewItem() {
+    }
 
     @Override
     public int getCount() {
-        return story.length;
+        return poem.length;
     }
 
     @Override
@@ -47,17 +54,18 @@ public class PoemGridViewItem extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View grid;
         LayoutInflater inflater= (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if(convertView== null){
+//        if(convertView== null){
             grid= new View(mContext);
             grid=inflater.inflate(R.layout.activity_poem_grid_view_item,null);
             TextView textView= (TextView) grid.findViewById(R.id.poem_grid_text);
+//            textView.setMovementMethod(new ScrollingMovementMethod());
             ImageView imageView= (ImageView) grid.findViewById(R.id.poem_grid_image);
-            textView.setText(story[position]);
+            textView.setText(poem[position]);
             imageView.setImageResource(image[position]);
-        }
-        else {
-            grid = (View) convertView;
-        }
+//        }
+//        else {
+//            grid = (View) convertView;
+//        }
         mmtext.prepareViewGroup(this.mContext,(ViewGroup) grid,mmtext.TEXT_UNICODE,true,false);
 
         return  grid;

@@ -40,7 +40,7 @@ public class EducationGridView1 extends AppCompatActivity {
         gesture = (GestureOverlayView) findViewById(R.id.gestures);
         back = (ImageButton) findViewById(R.id.img_btnBackEduGVD1);
         home = (ImageButton) findViewById(R.id.img_btnEduGVD1toHome);
-        voice = (ImageButton) findViewById(R.id.img_btnEduGVD1On);
+//        voice = (ImageButton) findViewById(R.id.img_btnEduGVD1On);
         forward = (ImageButton) findViewById(R.id.img_btnForward);
         backward = (ImageButton) findViewById(R.id.img_btnBackward);
 
@@ -62,17 +62,17 @@ public class EducationGridView1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        voice.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if(on)
-                    voice.setImageResource(R.drawable.voice_off);
-                else
-                    voice.setImageResource(R.drawable.voice_on);
-                on = !on;
-            }
-        });
+//        voice.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if(on)
+//                    voice.setImageResource(R.drawable.music_off);
+//                else
+//                    voice.setImageResource(R.drawable.music_on);
+//                on = !on;
+//            }
+//        });
 
         Bundle extras=getIntent().getExtras();
         String data=extras.getString("btn");

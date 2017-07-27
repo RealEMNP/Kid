@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -25,14 +24,14 @@ public class Story1_Detail extends Activity {
     int[] flag;
     int[] song;
     boolean on = true;
-    ImageButton back, home, voice;
+    ImageButton back, home, voice, backward, forward;
     int i;
     String query;
     String id ;
     private static final String DB_Name = "kid.db";
     DataBaseHelper helper;
     MediaPlayer mp;
-    OnPageChangeListener player;
+    int count = 0;
 
 
 
@@ -50,12 +49,10 @@ public class Story1_Detail extends Activity {
         home = (ImageButton) findViewById(R.id.img_btnStory1toHome);
         voice = (ImageButton) findViewById(R.id.img_btnStory1On);
         viewPager = (ViewPager) findViewById(R.id.pager);
+        forward = (ImageButton) findViewById(R.id.img_btnForward);
+//        backward = (ImageButton) findViewById(R.id.img_btnBackward);
 
         mmtext.prepareActivity(this,mmtext.TEXT_UNICODE,true,true);
-
-//        AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-//        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,20,0);
-
 
         back.setOnClickListener(new View.OnClickListener() {
 
@@ -76,10 +73,6 @@ public class Story1_Detail extends Activity {
             }
         });
 
-//        boolean hasBackKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_BACK);
-//        if(hasBackKey) mp.stop();
-
-
         Bundle extras = getIntent().getExtras();
         String data = extras.getString("st1");
 
@@ -94,6 +87,7 @@ public class Story1_Detail extends Activity {
                     R.mipmap.c_final,  R.drawable.ic_launcher};
 
             i=0;
+
             query = "Select detail from story";
             Cursor cursor = helper.rawQuery(query);
             while (cursor.moveToNext()) {
@@ -115,10 +109,10 @@ public class Story1_Detail extends Activity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
+                        voice.setImageResource(R.drawable.music_on);
                         mp = new MediaPlayer().create(Story1_Detail.this, song[0]);
                         mp.start();
                     }
@@ -139,16 +133,16 @@ public class Story1_Detail extends Activity {
                     mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                     mp.start();
                     on = mp.isPlaying();
-                    voice.setImageResource(R.drawable.voice_on);
+                    voice.setImageResource(R.drawable.music_on);
                     voice.setOnClickListener(new View.OnClickListener() {
 
                         @Override
                         public void onClick(View v) {
                             if (on) {
-                                voice.setImageResource(R.drawable.voice_off);
+                                voice.setImageResource(R.drawable.music_off);
                                 mp.stop();
                             } else {
-                                voice.setImageResource(R.drawable.voice_on);
+                                voice.setImageResource(R.drawable.music_on);
                                 mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                                 mp.start();
                             }
@@ -195,10 +189,10 @@ public class Story1_Detail extends Activity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
+                        voice.setImageResource(R.drawable.music_on);
                         mp = new MediaPlayer().create(Story1_Detail.this, song[0]);
                         mp.start();
                     }
@@ -219,16 +213,16 @@ public class Story1_Detail extends Activity {
                     mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                     mp.start();
                     on = mp.isPlaying();
-                    voice.setImageResource(R.drawable.voice_on);
+                    voice.setImageResource(R.drawable.music_on);
                     voice.setOnClickListener(new View.OnClickListener() {
 
                         @Override
                         public void onClick(View v) {
                             if (on) {
-                                voice.setImageResource(R.drawable.voice_off);
+                                voice.setImageResource(R.drawable.music_off);
                                 mp.stop();
                             } else {
-                                voice.setImageResource(R.drawable.voice_on);
+                                voice.setImageResource(R.drawable.music_on);
                                 mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                                 mp.start();
                             }
@@ -274,10 +268,10 @@ public class Story1_Detail extends Activity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
+                        voice.setImageResource(R.drawable.music_on);
                         mp = new MediaPlayer().create(Story1_Detail.this, song[0]);
                         mp.start();
                     }
@@ -298,16 +292,16 @@ public class Story1_Detail extends Activity {
                     mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                     mp.start();
                     on = mp.isPlaying();
-                    voice.setImageResource(R.drawable.voice_on);
+                    voice.setImageResource(R.drawable.music_on);
                     voice.setOnClickListener(new View.OnClickListener() {
 
                         @Override
                         public void onClick(View v) {
                             if (on) {
-                                voice.setImageResource(R.drawable.voice_off);
+                                voice.setImageResource(R.drawable.music_off);
                                 mp.stop();
                             } else {
-                                voice.setImageResource(R.drawable.voice_on);
+                                voice.setImageResource(R.drawable.music_on);
                                 mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                                 mp.start();
                             }
@@ -354,10 +348,10 @@ public class Story1_Detail extends Activity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
+                        voice.setImageResource(R.drawable.music_on);
                         mp = new MediaPlayer().create(Story1_Detail.this, song[0]);
                         mp.start();
                     }
@@ -378,16 +372,16 @@ public class Story1_Detail extends Activity {
                     mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                     mp.start();
                     on = mp.isPlaying();
-                    voice.setImageResource(R.drawable.voice_on);
+                    voice.setImageResource(R.drawable.music_on);
                     voice.setOnClickListener(new View.OnClickListener() {
 
                         @Override
                         public void onClick(View v) {
                             if (on) {
-                                voice.setImageResource(R.drawable.voice_off);
+                                voice.setImageResource(R.drawable.music_off);
                                 mp.stop();
                             } else {
-                                voice.setImageResource(R.drawable.voice_on);
+                                voice.setImageResource(R.drawable.music_on);
                                 mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                                 mp.start();
                             }
@@ -430,10 +424,10 @@ public class Story1_Detail extends Activity {
                 @Override
                 public void onClick(View v) {
                     if (on) {
-                        voice.setImageResource(R.drawable.voice_off);
+                        voice.setImageResource(R.drawable.music_off);
                         mp.stop();
                     } else {
-                        voice.setImageResource(R.drawable.voice_on);
+                        voice.setImageResource(R.drawable.music_on);
                         mp = new MediaPlayer().create(Story1_Detail.this, song[0]);
                         mp.start();
                     }
@@ -454,16 +448,16 @@ public class Story1_Detail extends Activity {
                     mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                     mp.start();
                     on = mp.isPlaying();
-                    voice.setImageResource(R.drawable.voice_on);
+                    voice.setImageResource(R.drawable.music_on);
                     voice.setOnClickListener(new View.OnClickListener() {
 
                         @Override
                         public void onClick(View v) {
                             if (on) {
-                                voice.setImageResource(R.drawable.voice_off);
+                                voice.setImageResource(R.drawable.music_off);
                                 mp.stop();
                             } else {
-                                voice.setImageResource(R.drawable.voice_on);
+                                voice.setImageResource(R.drawable.music_on);
                                 mp = new MediaPlayer().create(Story1_Detail.this, song[position]);
                                 mp.start();
                             }
@@ -475,6 +469,19 @@ public class Story1_Detail extends Activity {
 
         }
 
+
+        forward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(getItem(+1),true);
+            }
+        });
+//        backward.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                viewPager.setCurrentItem(getItem(-1),true);
+//            }
+//        });
 
 
         adapter = new Story1_ViewPageAdapter(Story1_Detail.this,rank, flag);
@@ -489,6 +496,9 @@ public class Story1_Detail extends Activity {
         mp.stop();
     }
 
-
+    private int getItem(int i){
+        return viewPager.getCurrentItem()+1;
     }
+
+}
 

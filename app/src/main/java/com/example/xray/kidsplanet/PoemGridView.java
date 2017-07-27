@@ -37,9 +37,9 @@ protected void onCreate(Bundle savedInstanceState){
         grid=(GridView) findViewById(R.id.poem_grid);
         grid.setAdapter(adapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-@Override
-public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-           if(poem[position]=="ဥပုသ်စောင့်"){
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+           if(position==0){
                    Intent intent= new Intent(getApplicationContext(), Poem1Detail.class);
                    intent.putExtra("st1","pos1");
                    startActivity(intent);
