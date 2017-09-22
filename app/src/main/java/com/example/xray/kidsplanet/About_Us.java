@@ -14,7 +14,7 @@ public class About_Us extends AppCompatActivity {
         actionBar.hide();
     }
     @Override
-    public void onBackPressed(){
+       public void onBackPressed(){
         super.onBackPressed();
     }
 }

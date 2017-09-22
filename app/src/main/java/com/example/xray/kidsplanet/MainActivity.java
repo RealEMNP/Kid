@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar= getSupportActionBar();
         actionBar.hide();
 
+        if (savedInstanceState == null){
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_IMMERSIVE| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION| View.SYSTEM_UI_FLAG_IMMERSIVE| View.SYSTEM_UI_FLAG_IMMERSIVE);
+        }
+
         ImageButton imgbtnStory , imgbtnPoem , imgbtnEdu;
         final FloatingActionButton FAB = (FloatingActionButton) findViewById(R.id.floatingActionButton);
 
@@ -48,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
 //
 //            @Override
 //            public void onClick(View v) {
+//            }
 //                Intent intent= new Intent(getApplicationContext(), EducationLayout.class);
 //                startActivity(intent);
-//            }
 //        });
         FAB.setOnClickListener(new View.OnClickListener(){
             @Override

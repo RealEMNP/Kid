@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.icip17.indra.sampleputu.MainActivity"
-    android:background="@drawable/elmu">
+    android:background="@drawable/homeelmuu">
         <include layout="@layout/content_main"/>
 
         <android.support.design.widget.FloatingActionButton
