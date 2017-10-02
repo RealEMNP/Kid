@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -20,6 +21,9 @@ public class StoryGridView extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_grid_view);
         getSupportActionBar().hide();
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         back = (ImageButton) findViewById(R.id.img_btnBackStory);
         back.setOnClickListener(new View.OnClickListener(){

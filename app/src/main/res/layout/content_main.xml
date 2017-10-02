@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2.5"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -20,6 +20,7 @@
             android:text="" />
 
         <ImageView
+            android:id="@+id/img_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
@@ -29,45 +30,96 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:weightSum="2">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="3">
 
-        <ImageButton
-            android:id="@+id/img_btnStory"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:padding="2dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/storyicon" />
+            android:orientation="vertical"
+            >
 
-        <ImageButton
-            android:id="@+id/img_btnPoem"
-            android:layout_width="wrap_content"
+            <ImageButton
+                android:id="@+id/img_btnStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/storiesicon"
+                android:layout_gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/img_btnPoem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/poemsicon"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:padding="2dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/poemicon" />
+            android:orientation="vertical">
 
-        <!--<ImageButton-->
-        <!--android:id="@+id/img_btnEdu"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight="1"-->
-        <!--android:adjustViewBounds="true"-->
-        <!--android:background="@null"-->
-        <!--android:padding="2dp"-->
-        <!--android:scaleType="fitXY"-->
-        <!--android:src="@drawable/eduicon" />-->
+            <ImageButton
+                android:id="@+id/img_btnPaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/paintingicon"
+                android:layout_gravity="bottom"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/img_btnMatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/matchingicon"
+                android:layout_gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/img_btnTrace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/tracelineicon"
+                android:layout_gravity="center"/>
+        </LinearLayout>
 
 
     </LinearLayout>

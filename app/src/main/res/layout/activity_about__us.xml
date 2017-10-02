@@ -6,6 +6,18 @@
     android:layout_height="wrap_content"
     android:background="@drawable/about_us_bg"
     tools:context="com.example.xray.kidsplanet.About_Us">
+
+    <ImageButton
+        android:id="@+id/img_btnBackPoem1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="1pt"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_icon" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

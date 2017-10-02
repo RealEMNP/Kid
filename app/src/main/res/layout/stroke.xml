@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:shape = "rectangle">
+    android:shape = "oval">
     <solid android:color = "#ffffff"/>
     <stroke android:width = "5dip" android:color = "#000"/>
     <padding

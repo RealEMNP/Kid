@@ -1,5 +1,7 @@
 package com.example.xray.kidsplanet;
 
+import android.animation.AnimatorSet;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,56 +13,129 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    ImageButton imgbtnStory, imgbtnPoem, imgbtnPaint, imgbtnMatch, imgbtnTrace;
+     ImageView imgtitle;
+    Intent intent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
-        ActionBar actionBar= getSupportActionBar();
+
+        ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        if (savedInstanceState == null){
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_IMMERSIVE| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN| View.SYSTEM_UI_FLAG_HIDE_NAVIGATION| View.SYSTEM_UI_FLAG_IMMERSIVE| View.SYSTEM_UI_FLAG_IMMERSIVE);
-        }
-
-        ImageButton imgbtnStory , imgbtnPoem , imgbtnEdu;
-        final FloatingActionButton FAB = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         imgbtnStory = (ImageButton) findViewById(R.id.img_btnStory);
         imgbtnPoem = (ImageButton) findViewById(R.id.img_btnPoem);
-//        imgbtnEdu = (ImageButton) findViewById(R.id.img_btnEdu);
+        imgbtnPaint = (ImageButton) findViewById(R.id.img_btnPaint);
+        imgbtnMatch = (ImageButton) findViewById(R.id.img_btnMatch);
+        imgbtnTrace = (ImageButton) findViewById(R.id.img_btnTrace);
+        imgtitle = (ImageView) findViewById(R.id.img_title);
+        final FloatingActionButton FAB = (FloatingActionButton) findViewById(R.id.floatingActionButton);
 
-        imgbtnStory.setOnClickListener(new View.OnClickListener(){
+        final Animation animation3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
+        FAB.startAnimation(animation3);
 
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getApplicationContext(), StoryGridView.class);
-                startActivity(intent);
-            }
-        });
-        imgbtnPoem.setOnClickListener(new View.OnClickListener(){
+//        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
+//        imgtitle.startAnimation(animation1);
+//        imgbtnStory.startAnimation(animation1);
+//        imgbtnPoem.startAnimation(animation1);
 
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getApplicationContext(), PoemGridView.class);
-                startActivity(intent);
-            }
-        });
-//        imgbtnEdu.setOnClickListener(new View.OnClickListener(){
+//
+//        final Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_out);
+//        final Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+//
+//        imgbtnStory.setAnimation(animation1);
+//        animation1.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//
+//            }
 //
 //            @Override
-//            public void onClick(View v) {
+//            public void onAnimationEnd(Animation animation) {
+//                imgbtnStory.startAnimation(animation2);
 //            }
-//                Intent intent= new Intent(getApplicationContext(), EducationLayout.class);
-//                startActivity(intent);
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//            }
 //        });
-        FAB.setOnClickListener(new View.OnClickListener(){
+//
+//        imgbtnStory.setAnimation(animation2);
+//        animation2.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//                imgbtnStory.startAnimation(animation1);
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//            }
+//        });
+
+
+        imgbtnStory.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(getApplicationContext(), About_Us.class);
+                intent = new Intent(getApplicationContext(), StoryGridView.class);
+                startActivity(intent);
+            }
+        });
+        imgbtnPoem.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), PoemGridView.class);
+                startActivity(intent);
+            }
+        });
+        imgbtnPaint.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), PaintPicture.class);
+                startActivity(intent);
+            }
+        });
+
+        imgbtnMatch.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), MatchingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+       imgbtnTrace.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               intent = new Intent(getApplicationContext(), TraceLine.class);
+               startActivity(intent);
+           }
+       });
+
+        FAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                intent = new Intent(getApplicationContext(), About_Us.class);
                 startActivity(intent);
             }
 
@@ -68,4 +143,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    }
+//    @Override
+//    public void onBackPressed() {
+//        new AlertDialog.Builder(this)
+//                .setIcon(R.drawable.app_icon)
+//                .setTitle("Exit")
+//                .setMessage("Are you sure you want to exit?")
+//                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        finish();
+//                    }
+//                })
+//                .setNegativeButton("No",null)
+//                .show();
+//    }
+}

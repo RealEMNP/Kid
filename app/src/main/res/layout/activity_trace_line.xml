@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+
+    <android.gesture.GestureOverlayView
+        android:id="@+id/gestures"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadeEnabled="true"
+        android:eventsInterceptionEnabled="true"
+        android:gestureColor="#000000"
+        android:gestureStrokeType="multiple"
+        android:gestureStrokeWidth="10"
+        android:uncertainGestureColor="#000000">
+
+        <ImageButton
+            android:id="@+id/imgbtn_previous"
+            android:layout_width="20pt"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backward_icon"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <ImageButton
+            android:id="@+id/imgbtn_next"
+            android:layout_width="20pt"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/forward_icon" />
+
+    </android.gesture.GestureOverlayView>
+
+
+</RelativeLayout>

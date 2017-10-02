@@ -13,19 +13,6 @@
         android:layout_height="wrap_content"
         android:gravity="center">
 
-        <!--<ImageButton-->
-            <!--android:id="@+id/img_btnBackward"-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="40dp"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:layout_marginTop="100dp"-->
-            <!--android:adjustViewBounds="true"-->
-            <!--android:background="@android:color/transparent"-->
-            <!--android:scaleType="fitCenter"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:src="@drawable/backward_icon"-->
-            <!--/>-->
 
         <android.support.v4.view.ViewPager
             android:id="@+id/pager"

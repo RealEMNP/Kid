@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +30,8 @@ public class Poem1Detail extends AppCompatActivity {
         setContentView(R.layout.activity_poem1_detail);
         getSupportActionBar().hide();
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         helper = DataBaseHelper.getInstance(this, DB_Name);

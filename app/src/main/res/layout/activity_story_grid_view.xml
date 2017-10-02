@@ -44,7 +44,7 @@
                 android:layout_margin="10dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/storyicon" />
+                android:src="@drawable/storiesicon" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout

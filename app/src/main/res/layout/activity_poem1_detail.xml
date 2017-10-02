@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.xray.kidsplanet.Poem1Detail"
     android:weightSum="2"
     android:background="#F0F8FF"
@@ -18,14 +19,24 @@
         <LinearLayout
             android:layout_width="500dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:gravity="center">
 
-            <ImageView
+            <!--<ImageView-->
+                <!--android:id="@+id/img_poem"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:scaleType="fitXY"/>-->
+            <com.github.siyamed.shapeimageview.RoundedImageView
                 android:id="@+id/img_poem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"/>
+                app:siRadius="10dp"
+                app:siBorderWidth="6dp"
+                app:siBorderColor="@color/icon_color"
+                app:siSquare="true"/>
+
         </LinearLayout>
 
         <LinearLayout

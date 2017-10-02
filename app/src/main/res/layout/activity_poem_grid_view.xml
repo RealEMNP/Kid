@@ -44,7 +44,7 @@
                 android:layout_margin="10dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/poemicon" />
+                android:src="@drawable/poemsicon" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout

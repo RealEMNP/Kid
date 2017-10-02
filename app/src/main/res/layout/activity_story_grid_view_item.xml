@@ -2,25 +2,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context="com.example.xray.kidsplanet.StoryGridViewItem">
 
-    <ImageView
+    <!--<ImageView-->
+        <!--android:id="@+id/story_grid_image"-->
+        <!--android:layout_width="120dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:background="@layout/stroke"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+    <com.github.siyamed.shapeimageview.CircularImageView
         android:id="@+id/story_grid_image"
         android:layout_width="120dp"
         android:layout_height="100dp"
-        android:background="@layout/stroke"
-        android:scaleType="fitXY"
-        android:layout_margin="10dp"
-        />
+        app:siBorderWidth="6dp"
+        app:siBorderColor="@color/icon_color"/>
+
     <TextView
         android:id="@+id/story_grid_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#fff"
-        android:background="#75b10c"
-        android:layout_marginTop="-6dp"
         android:layout_marginBottom="5dp"
-        android:textSize="15sp"/>
+        android:layout_marginTop="1dp"
+        android:background="#75b10c"
+        android:textColor="#fff"
+        android:textSize="15sp" />
 </LinearLayout>
