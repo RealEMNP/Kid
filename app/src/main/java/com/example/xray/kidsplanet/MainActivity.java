@@ -45,50 +45,6 @@ public class MainActivity extends AppCompatActivity {
         final Animation animation3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
         FAB.startAnimation(animation3);
 
-//        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
-//        imgtitle.startAnimation(animation1);
-//        imgbtnStory.startAnimation(animation1);
-//        imgbtnPoem.startAnimation(animation1);
-
-//
-//        final Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_out);
-//        final Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
-//
-//        imgbtnStory.setAnimation(animation1);
-//        animation1.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                imgbtnStory.startAnimation(animation2);
-//            }
-//
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//            }
-//        });
-//
-//        imgbtnStory.setAnimation(animation2);
-//        animation2.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                imgbtnStory.startAnimation(animation1);
-//            }
-//
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//            }
-//        });
-
-
         imgbtnStory.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -143,19 +99,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        new AlertDialog.Builder(this)
-//                .setIcon(R.drawable.app_icon)
-//                .setTitle("Exit")
-//                .setMessage("Are you sure you want to exit?")
-//                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        finish();
-//                    }
-//                })
-//                .setNegativeButton("No",null)
-//                .show();
-//    }
 }
