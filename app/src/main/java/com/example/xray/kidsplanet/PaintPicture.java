@@ -36,18 +36,16 @@ public class PaintPicture extends AppCompatActivity {
             }
         });
 
-        simpleGrid = (GridView) findViewById(R.id.simpleGridView); // init GridView
-        // Create an object of CustomAdapter and set Adapter to GirdView
+        simpleGrid = (GridView) findViewById(R.id.simpleGridView); 
         CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), images);
         simpleGrid.setAdapter(customAdapter);
-        // implement setOnItemClickListener event on GridView
         simpleGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // set an Intent to Another Activity
                 Intent intent = new Intent(PaintPicture.this, PaintActivity.class);
-                intent.putExtra("image", position);// put image data in Intent
-                startActivity(intent); // start Intent
+                intent.putExtra("image", position);
+                startActivity(intent); 
             }
         });
     }
