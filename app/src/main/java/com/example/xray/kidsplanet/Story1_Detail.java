@@ -53,7 +53,6 @@ public class Story1_Detail extends Activity {
         voice = (ImageButton) findViewById(R.id.img_btnStory1On);
         viewPager = (ViewPager) findViewById(R.id.pager);
         forward = (ImageButton) findViewById(R.id.img_btnForward);
-//        backward = (ImageButton) findViewById(R.id.img_btnBackward);
 
         mmtext.prepareActivity(this,mmtext.TEXT_UNICODE,true,true);
 
@@ -479,12 +478,6 @@ public class Story1_Detail extends Activity {
                 viewPager.setCurrentItem(getItem(+1),true);
             }
         });
-//        backward.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                viewPager.setCurrentItem(getItem(-1),true);
-//            }
-//        });
 
 
         adapter = new Story1_ViewPageAdapter(Story1_Detail.this,rank, flag);
