@@ -54,18 +54,12 @@ public class PoemGridViewItem extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View grid;
         LayoutInflater inflater= (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        if(convertView== null){
             grid= new View(mContext);
             grid=inflater.inflate(R.layout.activity_poem_grid_view_item,null);
             TextView textView= (TextView) grid.findViewById(R.id.poem_grid_text);
-//            textView.setMovementMethod(new ScrollingMovementMethod());
             ImageView imageView= (ImageView) grid.findViewById(R.id.poem_grid_image);
             textView.setText(poem[position]);
             imageView.setImageResource(image[position]);
-//        }
-//        else {
-//            grid = (View) convertView;
-//        }
         mmtext.prepareViewGroup(this.mContext,(ViewGroup) grid,mmtext.TEXT_UNICODE,true,false);
 
         return  grid;
