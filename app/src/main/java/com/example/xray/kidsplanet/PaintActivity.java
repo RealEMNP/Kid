@@ -278,7 +278,6 @@ public class PaintActivity extends Activity implements View.OnTouchListener {
         Canvas canvas;
 
 
-        // Bitmap mutableBitmap ;
         public MyView(PaintActivity context) {
             super(context);
             paint = new Paint();
@@ -342,15 +341,7 @@ public class PaintActivity extends Activity implements View.OnTouchListener {
                 this.pt = p;
                 this.replacementColor = tc;
                 this.targetColor = sc;
-//                pd.setMessage("Filling....");
-//                pd.show();
             }
-
-//            @Override
-//            protected void onPreExecute() {
-//                pd.show();
-//
-//            }
 
             @Override
             protected void onProgressUpdate(Integer... values) {
@@ -371,8 +362,6 @@ public class PaintActivity extends Activity implements View.OnTouchListener {
             }
         }
     }
-
-// flood fill
 
     public class FloodFill {
         public void floodFill(Bitmap image, Point node, int targetColor,
